@@ -1,20 +1,30 @@
 [
 {
-email: "johndoe@gmail.com",
-loss: 2,
-password: "password",
-totalGames: 5,
-win: 3,
-winPecentage: 150,
-winStreak: 3
-},
+ email: "johndoe@gmail.com",
+ password: "password",
+ name: "John",
+ avatarURL: "http://",
+ catchPrase: "Got yah",
+ paddleGripStyle: "Paddle Grip Style",
+ signatureMove: "Signature Move",
+ homeTown: "Houston",
+ wins: 3,
+ losses: 2,
+ winStreak: 3,
+ totalGames: 5,
+}
 {
-email: "mike@gmail.com",
-loss: 3,
-password: "password",
-totalGames: 5,
-win: 2,
-winPecentage: 66.6666666666667,
-winStreak: 0
+ email: "jane@gmail.com",
+ password: "password",
+ name: "Jane",
+ avatarURL: "http://",
+ catchPrase: "Lets do it!",
+ paddleGripStyle: "Paddle Grip Style",
+ signatureMove: "Signature Move",
+ homeTown: "Dallas",
+ wins: 2,
+ losses: 3,
+ winStreak: 0,
+ totalGames: 5,
 }
 ]

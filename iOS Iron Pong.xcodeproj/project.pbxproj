@@ -19,6 +19,9 @@
 		C625AC0D1E8EB93900D5D43D /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C625AC0C1E8EB93900D5D43D /* UsersTableViewController.swift */; };
 		C625AC101E8EB9D300D5D43D /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C625AC0F1E8EB9D300D5D43D /* UserProfileViewController.swift */; };
 		C625AC141E8EC54F00D5D43D /* mockUserAPI.json in Resources */ = {isa = PBXBuildFile; fileRef = C625AC131E8EC54F00D5D43D /* mockUserAPI.json */; };
+		C625AC181E8ECFD600D5D43D /* mockGameAPI.json in Resources */ = {isa = PBXBuildFile; fileRef = C625AC171E8ECFD600D5D43D /* mockGameAPI.json */; };
+		C625AC1A1E8ED6FB00D5D43D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C625AC191E8ED6FB00D5D43D /* User.swift */; };
+		C625AC1D1E8ED71100D5D43D /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = C625AC1C1E8ED71100D5D43D /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		C625AC0C1E8EB93900D5D43D /* UsersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
 		C625AC0F1E8EB9D300D5D43D /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
 		C625AC131E8EC54F00D5D43D /* mockUserAPI.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mockUserAPI.json; sourceTree = "<group>"; };
+		C625AC171E8ECFD600D5D43D /* mockGameAPI.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mockGameAPI.json; sourceTree = "<group>"; };
+		C625AC191E8ED6FB00D5D43D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C625AC1C1E8ED71100D5D43D /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +74,7 @@
 		C625ABEF1E8EB80F00D5D43D /* iOS Iron Pong */ = {
 			isa = PBXGroup;
 			children = (
+				C625AC171E8ECFD600D5D43D /* mockGameAPI.json */,
 				C625AC131E8EC54F00D5D43D /* mockUserAPI.json */,
 				C625AC0E1E8EB93E00D5D43D /* ViewControllers */,
 				C625ABF01E8EB80F00D5D43D /* AppDelegate.swift */,
@@ -75,6 +82,8 @@
 				C625ABF71E8EB80F00D5D43D /* Assets.xcassets */,
 				C625ABF91E8EB80F00D5D43D /* LaunchScreen.storyboard */,
 				C625ABFC1E8EB80F00D5D43D /* Info.plist */,
+				C625AC191E8ED6FB00D5D43D /* User.swift */,
+				C625AC1C1E8ED71100D5D43D /* Game.swift */,
 			);
 			path = "iOS Iron Pong";
 			sourceTree = "<group>";
@@ -154,6 +163,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C625ABFB1E8EB80F00D5D43D /* LaunchScreen.storyboard in Resources */,
+				C625AC181E8ECFD600D5D43D /* mockGameAPI.json in Resources */,
 				C625ABF81E8EB80F00D5D43D /* Assets.xcassets in Resources */,
 				C625ABF61E8EB80F00D5D43D /* Main.storyboard in Resources */,
 				C625AC141E8EC54F00D5D43D /* mockUserAPI.json in Resources */,
@@ -168,10 +178,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C625AC0B1E8EB92700D5D43D /* SignUpViewController.swift in Sources */,
+				C625AC1D1E8ED71100D5D43D /* Game.swift in Sources */,
 				C625AC101E8EB9D300D5D43D /* UserProfileViewController.swift in Sources */,
 				C625AC091E8EB90400D5D43D /* ScoreBoardTableViewController.swift in Sources */,
 				C625AC071E8EB8DB00D5D43D /* QueueViewController.swift in Sources */,
 				C625AC031E8EB8B200D5D43D /* GameViewController.swift in Sources */,
+				C625AC1A1E8ED6FB00D5D43D /* User.swift in Sources */,
 				C625ABF11E8EB80F00D5D43D /* AppDelegate.swift in Sources */,
 				C625AC0D1E8EB93900D5D43D /* UsersTableViewController.swift in Sources */,
 				C625AC051E8EB8CB00D5D43D /* LogInViewController.swift in Sources */,
