@@ -41,9 +41,6 @@
                                 <state key="normal" title="Sign In"/>
                                 <connections>
                                     <action selector="signInButtonPressed:" destination="nv4-1O-mY6" eventType="touchUpInside" id="P38-b1-ORs"/>
-                                    <segue destination="yTz-Wi-8nD" kind="show" identifier="ToTabBarSegue" id="L1B-ws-OUT">
-                                        <nil key="action"/>
-                                    </segue>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="401-44-rOG">
@@ -53,7 +50,7 @@
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
                                     <action selector="signUpButtonPressed:" destination="nv4-1O-mY6" eventType="touchUpInside" id="ejV-Hb-e0o"/>
-                                    <segue destination="qhY-dZ-UMa" kind="presentation" identifier="ToSignUpSegue" id="80U-Rz-Ieq"/>
+                                    <segue destination="qhY-dZ-UMa" kind="show" identifier="" id="80U-Rz-Ieq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -62,6 +59,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="A0U-mE-Daj" id="BQ7-Jv-mvF"/>
                         <outlet property="passwordTextField" destination="tj3-4z-Pd1" id="n3G-8A-rtM"/>
+                        <segue destination="yTz-Wi-8nD" kind="presentation" identifier="SignInSegue" id="4D3-30-oC0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pK0-7R-V3b" sceneMemberID="firstResponder"/>
@@ -288,9 +286,6 @@
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
                                     <action selector="signUpButtonPressed:" destination="qhY-dZ-UMa" eventType="touchUpInside" id="BWe-zW-HHH"/>
-                                    <segue destination="yTz-Wi-8nD" kind="show" identifier="SignUpFrom" id="SCd-7C-rK5">
-                                        <nil key="action"/>
-                                    </segue>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ttQ-8f-LBF">
@@ -314,14 +309,15 @@
                         <outlet property="emailTextField" destination="ttQ-8f-LBF" id="gcq-Mf-Rj7"/>
                         <outlet property="nameTextField" destination="Ofc-u7-ZxC" id="ThH-2G-VSh"/>
                         <outlet property="passwordTextField" destination="plK-ty-ZlB" id="uyp-nh-TuV"/>
+                        <segue destination="yTz-Wi-8nD" kind="presentation" identifier="SignUpSegue" id="EZ4-Ln-oM1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E81-fT-WaS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="63" y="873"/>
+            <point key="canvasLocation" x="56" y="955"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="SCd-7C-rK5"/>
+        <segue reference="4D3-30-oC0"/>
     </inferredMetricsTieBreakers>
 </document>

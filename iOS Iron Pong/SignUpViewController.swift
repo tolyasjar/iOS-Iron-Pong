@@ -26,9 +26,47 @@ class SignUpViewController: UIViewController {
 
     @IBAction func signUpButtonPressed(_ sender: Any) {
         
-        user.name = self.nameTextField.text!
-        user.password = self.passwordTextField.text!
-        user.email = self.emailTextField.text!
+
+        if self.emailTextField.text == "" {
+            
+            let alertController = UIAlertController(title: "Oops", message: "Enter a email address.", preferredStyle: .alert)
+            let dismissAction = UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.cancel) {
+                UIAlertAction in
+            }
+            alertController.addAction(dismissAction)
+            self.present(alertController, animated: true, completion: nil)
+            
+        } else {
+            self.user.email = self.emailTextField.text
+        }
+        
+        if self.passwordTextField.text == "" {
+            let alertController = UIAlertController(title: "Oops", message: "Enter a email password.", preferredStyle: .alert)
+            let dismissAction = UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.cancel) {
+                UIAlertAction in
+            }
+            alertController.addAction(dismissAction)
+            self.present(alertController, animated: true, completion: nil)
+            
+        } else {
+            self.user.password = self.passwordTextField.text
+        }
+        
+        if self.nameTextField.text == "" {
+            let alertController = UIAlertController(title: "Oops", message: "Enter a name.", preferredStyle: .alert)
+            let dismissAction = UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.cancel) {
+                UIAlertAction in
+            }
+            alertController.addAction(dismissAction)
+            self.present(alertController, animated: true, completion: nil)
+            
+        } else {
+            self.user.name = self.nameTextField.text
+        }
+        
+        self.performSegue(withIdentifier: "SignUpSegue", sender: self)
+
+        
     }
 
 
