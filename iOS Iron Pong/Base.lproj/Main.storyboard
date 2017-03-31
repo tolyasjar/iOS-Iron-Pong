@@ -22,14 +22,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A0U-mE-Daj">
-                                <rect key="frame" x="87" y="177" width="201" height="30"/>
+                                <rect key="frame" x="87" y="177" width="200" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tj3-4z-Pd1">
-                                <rect key="frame" x="87" y="249" width="201" height="30"/>
+                                <rect key="frame" x="87" y="249" width="200" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -40,7 +40,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign In"/>
                                 <connections>
-                                    <segue destination="yTz-Wi-8nD" kind="show" id="L1B-ws-OUT">
+                                    <action selector="signInButtonPressed:" destination="nv4-1O-mY6" eventType="touchUpInside" id="P38-b1-ORs"/>
+                                    <segue destination="yTz-Wi-8nD" kind="show" identifier="ToTabBarSegue" id="L1B-ws-OUT">
                                         <nil key="action"/>
                                     </segue>
                                 </connections>
@@ -51,12 +52,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
-                                    <segue destination="qhY-dZ-UMa" kind="presentation" id="80U-Rz-Ieq"/>
+                                    <action selector="signUpButtonPressed:" destination="nv4-1O-mY6" eventType="touchUpInside" id="ejV-Hb-e0o"/>
+                                    <segue destination="qhY-dZ-UMa" kind="presentation" identifier="ToSignUpSegue" id="80U-Rz-Ieq"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="A0U-mE-Daj" id="BQ7-Jv-mvF"/>
+                        <outlet property="passwordTextField" destination="tj3-4z-Pd1" id="n3G-8A-rtM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pK0-7R-V3b" sceneMemberID="firstResponder"/>
             </objects>
@@ -270,14 +276,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="plK-ty-ZlB">
-                                <rect key="frame" x="139" y="220" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ofc-u7-ZxC">
-                                <rect key="frame" x="139" y="298" width="97" height="30"/>
+                                <rect key="frame" x="78" y="222" width="200" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -288,13 +287,21 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
-                                    <segue destination="yTz-Wi-8nD" kind="show" id="SCd-7C-rK5">
+                                    <action selector="signUpButtonPressed:" destination="qhY-dZ-UMa" eventType="touchUpInside" id="BWe-zW-HHH"/>
+                                    <segue destination="yTz-Wi-8nD" kind="show" identifier="SignUpFrom" id="SCd-7C-rK5">
                                         <nil key="action"/>
                                     </segue>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ttQ-8f-LBF">
-                                <rect key="frame" x="139" y="150" width="97" height="30"/>
+                                <rect key="frame" x="78" y="155" width="200" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ofc-u7-ZxC">
+                                <rect key="frame" x="78" y="285" width="200" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -303,6 +310,11 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="ttQ-8f-LBF" id="gcq-Mf-Rj7"/>
+                        <outlet property="nameTextField" destination="Ofc-u7-ZxC" id="ThH-2G-VSh"/>
+                        <outlet property="passwordTextField" destination="plK-ty-ZlB" id="uyp-nh-TuV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E81-fT-WaS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -310,6 +322,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="L1B-ws-OUT"/>
+        <segue reference="SCd-7C-rK5"/>
     </inferredMetricsTieBreakers>
 </document>
