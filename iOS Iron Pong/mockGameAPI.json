@@ -1,0 +1,34 @@
+[
+{
+ playerOne: "Jane",
+ playerTwo: "John",
+ winner: "Jane",
+ loser: "John",
+ playerOneScore: 5,
+ playerTwoScore: 2
+}
+{
+playerOne: "Jane",
+playerTwo: "John",
+winner: "Jane",
+loser: "John",
+playerOneScore: 10,
+playerTwoScore: 2
+}
+{
+playerOne: "Jane",
+playerTwo: "John",
+winner: "Jane",
+loser: "John",
+playerOneScore: 11,
+playerTwoScore: 7
+}
+{
+playerOne: "Jane",
+playerTwo: "John",
+winner: "Jane",
+loser: "John",
+playerOneScore: 13,
+playerTwoScore: 10
+}
+]
