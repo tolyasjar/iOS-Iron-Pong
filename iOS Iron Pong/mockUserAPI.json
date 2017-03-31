@@ -1,0 +1,20 @@
+[
+{
+email: "johndoe@gmail.com",
+loss: 2,
+password: "password",
+totalGames: 5,
+win: 3,
+winPecentage: 150,
+winStreak: 3
+},
+{
+email: "mike@gmail.com",
+loss: 3,
+password: "password",
+totalGames: 5,
+win: 2,
+winPecentage: 66.6666666666667,
+winStreak: 0
+}
+]

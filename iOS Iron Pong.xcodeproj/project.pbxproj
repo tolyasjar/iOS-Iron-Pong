@@ -18,6 +18,7 @@
 		C625AC0B1E8EB92700D5D43D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C625AC0A1E8EB92700D5D43D /* SignUpViewController.swift */; };
 		C625AC0D1E8EB93900D5D43D /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C625AC0C1E8EB93900D5D43D /* UsersTableViewController.swift */; };
 		C625AC101E8EB9D300D5D43D /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C625AC0F1E8EB9D300D5D43D /* UserProfileViewController.swift */; };
+		C625AC141E8EC54F00D5D43D /* mockUserAPI.json in Resources */ = {isa = PBXBuildFile; fileRef = C625AC131E8EC54F00D5D43D /* mockUserAPI.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		C625AC0A1E8EB92700D5D43D /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		C625AC0C1E8EB93900D5D43D /* UsersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
 		C625AC0F1E8EB9D300D5D43D /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		C625AC131E8EC54F00D5D43D /* mockUserAPI.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mockUserAPI.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 		C625ABEF1E8EB80F00D5D43D /* iOS Iron Pong */ = {
 			isa = PBXGroup;
 			children = (
+				C625AC131E8EC54F00D5D43D /* mockUserAPI.json */,
 				C625AC0E1E8EB93E00D5D43D /* ViewControllers */,
 				C625ABF01E8EB80F00D5D43D /* AppDelegate.swift */,
 				C625ABF41E8EB80F00D5D43D /* Main.storyboard */,
@@ -153,6 +156,7 @@
 				C625ABFB1E8EB80F00D5D43D /* LaunchScreen.storyboard in Resources */,
 				C625ABF81E8EB80F00D5D43D /* Assets.xcassets in Resources */,
 				C625ABF61E8EB80F00D5D43D /* Main.storyboard in Resources */,
+				C625AC141E8EC54F00D5D43D /* mockUserAPI.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +340,7 @@
 				C625AC011E8EB80F00D5D43D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
