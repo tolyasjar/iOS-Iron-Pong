@@ -8,20 +8,21 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     
-    var user = User()
+    var currentUser = User()
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
 
-        // Do any additional setup after loading the view.
+        self.emailTextField.delegate = self
+        self.passwordTextField.delegate = self
+        self.nameTextField.delegate = self
+
     }
 
     @IBAction func signUpButtonPressed(_ sender: Any) {
@@ -29,7 +30,7 @@ class SignUpViewController: UIViewController {
 
         if self.emailTextField.text == "" {
             
-            let alertController = UIAlertController(title: "Oops", message: "Enter a email address.", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Oops!", message: "Enter a email address.", preferredStyle: .alert)
             let dismissAction = UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.cancel) {
                 UIAlertAction in
             }
@@ -37,11 +38,11 @@ class SignUpViewController: UIViewController {
             self.present(alertController, animated: true, completion: nil)
             
         } else {
-            self.user.email = self.emailTextField.text
+            self.currentUser.email = self.emailTextField.text
         }
         
         if self.passwordTextField.text == "" {
-            let alertController = UIAlertController(title: "Oops", message: "Enter a email password.", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Oops!", message: "Enter a email password.", preferredStyle: .alert)
             let dismissAction = UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.cancel) {
                 UIAlertAction in
             }
@@ -49,11 +50,11 @@ class SignUpViewController: UIViewController {
             self.present(alertController, animated: true, completion: nil)
             
         } else {
-            self.user.password = self.passwordTextField.text
+            self.currentUser.password = self.passwordTextField.text
         }
         
         if self.nameTextField.text == "" {
-            let alertController = UIAlertController(title: "Oops", message: "Enter a name.", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Oops!", message: "Enter a name.", preferredStyle: .alert)
             let dismissAction = UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.cancel) {
                 UIAlertAction in
             }
@@ -61,12 +62,17 @@ class SignUpViewController: UIViewController {
             self.present(alertController, animated: true, completion: nil)
             
         } else {
-            self.user.name = self.nameTextField.text
+            self.currentUser.name = self.nameTextField.text
         }
         
         self.performSegue(withIdentifier: "SignUpSegue", sender: self)
 
         
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 
 
