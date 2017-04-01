@@ -16,7 +16,7 @@ class Game {
     var loser :String?
     var playerOneScore :Double?
     var playerTwoScore :Double?
-    
+    var id :Double?
 
     
 }
