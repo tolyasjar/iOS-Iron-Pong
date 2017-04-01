@@ -28,9 +28,12 @@ class PublicUsersViewController: UIViewController, UITableViewDelegate, UITableV
         URLSession.shared.dataTask(with: url) { (data, responce, error) in
             let json = try! JSONSerialization.jsonObject(with: data!, options: []) as! [[String:Any]]
             for dictionary in json {
+                print(dictionary)
                 let name = dictionary["nickName"] as! String
+                let wins = dictionary["wins"] as! Double
                 let user = User()
                 user.nickName = name
+                user.wins = wins
                 self.users.append(user)
             }
             DispatchQueue.main.async {
@@ -60,6 +63,9 @@ class PublicUsersViewController: UIViewController, UITableViewDelegate, UITableV
         let user = users[indexPath.row]
         
         cell.textLabel?.text = user.nickName
+        let wins = String(describing: user.wins!)
+
+        cell.detailTextLabel?.text = "Wins: \(wins)"
         
         // Configure the cell...
         

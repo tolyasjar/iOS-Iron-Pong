@@ -69,6 +69,10 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
 
         
     }
+    @IBAction func cancelButtonPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
