@@ -12,20 +12,19 @@ class User {
     
     var email :String?
     var password :String?
-    var name :String?
-    var avatarURL :String?
-    var catchPrase :String?
-    var paddleGripStyle :String?
-    var signatureMove :String?
-    var homeTown :String?
-    var wins :Double?
-    var losses :Double?
-    var winStreak :Double?
-    var totalGames :Double?
+    var nickName: String?
+    var createdAt: Date?
+    var wins: Double?
+    var losses: Double?
+    var winStreak: Double?
+    var winRatio: Double?
+    var totalGames: Double?
+    var avatarURL: String?
+    var catchPhrase: String?
+    var paddleGripStyle: String?
+    var signatureMove: String?
+    var homeTown: String?
+    
     var id :Double?
-    
-
-    
-    
     
 }

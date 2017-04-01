@@ -62,7 +62,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             self.present(alertController, animated: true, completion: nil)
             
         } else {
-            self.currentUser.name = self.nameTextField.text
+            self.currentUser.nickName = self.nameTextField.text
         }
         
         self.performSegue(withIdentifier: "SignUpSegue", sender: self)
