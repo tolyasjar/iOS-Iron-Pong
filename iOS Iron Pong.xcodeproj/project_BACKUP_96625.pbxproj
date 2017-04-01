@@ -209,7 +209,11 @@
 				C625AC1D1E8ED71100D5D43D /* Game.swift in Sources */,
 				C625AC101E8EB9D300D5D43D /* UserProfileViewController.swift in Sources */,
 				C625AC091E8EB90400D5D43D /* ScoreBoardTableViewController.swift in Sources */,
+<<<<<<< HEAD
+				C625AC421E902E4200D5D43D /* ReclaimOldAccountViewController.swift in Sources */,
+=======
 				AB3F8EE01E9021230047CCE3 /* ScoreboardTableViewCell.swift in Sources */,
+>>>>>>> bbf3716f9f2990b73f6b10deb134639d0839ca12
 				C81456C01E8FD7FD007E9F07 /* CurrentUserTableViewController.swift in Sources */,
 				C625AC071E8EB8DB00D5D43D /* QueueViewController.swift in Sources */,
 				C625AC031E8EB8B200D5D43D /* GameViewController.swift in Sources */,
