@@ -28,7 +28,7 @@ class CurrentUserTableViewController: UITableViewController {
         populateDummyUsers()
         // Assumption CurrentUser = users[0]
         let currentUser = users[0]
-        self.nameLbl.text = currentUser.name
+        self.nameLbl.text = currentUser.nickName
         self.emailLbl.text = currentUser.email
         self.passwordLbl.text = currentUser.password
         self.homeTownLbl.text = currentUser.homeTown
@@ -36,7 +36,7 @@ class CurrentUserTableViewController: UITableViewController {
         self.signatureMoveLbl.text = currentUser.signatureMove
         self.winsLbl.text = "\(currentUser.wins!)"
         self.lossesLbl.text = "\(currentUser.losses!)"
-        self.catchPhraseLbl.text = currentUser.catchPrase
+        self.catchPhraseLbl.text = currentUser.catchPhrase
         
     }
     
@@ -54,11 +54,11 @@ class CurrentUserTableViewController: UITableViewController {
                     
                     for item in jsonDict {
                         let user = User()
-                        user.name = item["name"] as? String
+                        user.nickName = item["nickName"] as? String
                         user.email = item["email"] as? String
                         user.password = item["password"] as? String
                         user.avatarURL = item["avatarURL"] as? String
-                        user.catchPrase = item ["catchPrase"] as? String
+                        user.catchPhrase = item ["catchPhrase"] as? String
                         user.signatureMove = item["signatureMove"] as? String
                         user.paddleGripStyle = item["paddleGripStyle"] as? String
                         user.homeTown = item["homeTown"] as? String

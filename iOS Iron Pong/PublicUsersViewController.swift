@@ -30,7 +30,7 @@ class PublicUsersViewController: UIViewController, UITableViewDelegate, UITableV
             for dictionary in json {
                 let name = dictionary["nickName"] as! String
                 let user = User()
-                user.name = name
+                user.nickName = name
                 self.users.append(user)
             }
             DispatchQueue.main.async {
@@ -59,7 +59,7 @@ class PublicUsersViewController: UIViewController, UITableViewDelegate, UITableV
         
         let user = users[indexPath.row]
         
-        cell.textLabel?.text = user.name
+        cell.textLabel?.text = user.nickName
         
         // Configure the cell...
         

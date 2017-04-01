@@ -9,13 +9,14 @@
 import Foundation
 
 class Game {
-    
-    var playerOne :String?
-    var playerTwo :String?
-    var winner :String?
-    var loser :String?
-    var playerOneScore :Double?
-    var playerTwoScore :Double?
+
+    var playerOne: String?
+    var playerTwo: String?
+    var winner: String?
+    var loser: String?
+    var playerOneScore: Double?
+    var playerTwoScore: Double?
+
     var id :Double?
 
     
