@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB3F8EE01E9021230047CCE3 /* ScoreboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3F8EDF1E9021230047CCE3 /* ScoreboardTableViewCell.swift */; };
 		C625ABF11E8EB80F00D5D43D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C625ABF01E8EB80F00D5D43D /* AppDelegate.swift */; };
 		C625ABF61E8EB80F00D5D43D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C625ABF41E8EB80F00D5D43D /* Main.storyboard */; };
 		C625ABF81E8EB80F00D5D43D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C625ABF71E8EB80F00D5D43D /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB3F8EDF1E9021230047CCE3 /* ScoreboardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreboardTableViewCell.swift; sourceTree = "<group>"; };
 		C625ABED1E8EB80F00D5D43D /* iOS Iron Pong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Iron Pong.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C625ABF01E8EB80F00D5D43D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C625ABF51E8EB80F00D5D43D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				C625AC041E8EB8CB00D5D43D /* LogInViewController.swift */,
 				C625AC061E8EB8DB00D5D43D /* QueueViewController.swift */,
 				C625AC081E8EB90400D5D43D /* ScoreBoardTableViewController.swift */,
+				AB3F8EDF1E9021230047CCE3 /* ScoreboardTableViewCell.swift */,
 				C625AC0A1E8EB92700D5D43D /* SignUpViewController.swift */,
 				C625AC0C1E8EB93900D5D43D /* UsersTableViewController.swift */,
 				C625AC0F1E8EB9D300D5D43D /* UserProfileViewController.swift */,
@@ -203,6 +206,7 @@
 				C625AC1D1E8ED71100D5D43D /* Game.swift in Sources */,
 				C625AC101E8EB9D300D5D43D /* UserProfileViewController.swift in Sources */,
 				C625AC091E8EB90400D5D43D /* ScoreBoardTableViewController.swift in Sources */,
+				AB3F8EE01E9021230047CCE3 /* ScoreboardTableViewCell.swift in Sources */,
 				C81456C01E8FD7FD007E9F07 /* CurrentUserTableViewController.swift in Sources */,
 				C625AC071E8EB8DB00D5D43D /* QueueViewController.swift in Sources */,
 				C625AC031E8EB8B200D5D43D /* GameViewController.swift in Sources */,
