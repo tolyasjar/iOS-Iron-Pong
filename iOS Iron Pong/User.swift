@@ -22,6 +22,7 @@ class User {
     var losses :Double?
     var winStreak :Double?
     var totalGames :Double?
+    var id :Double?
     
 
     
