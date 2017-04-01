@@ -31,7 +31,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             "authorization": "Bearer gUUfpJRjmPaVD2MTlibrrFtbded88WdJPiEG_u19CINNBRn7xiaG7gPWAoryBEwJ5289zNwANOtVQuRvQTJVdc2Ukblq72in08ryy0zZQYyaDQxHzp6a7vFqLkzZWHYx",
             "content-type": "application/json",
             "cache-control": "no-cache",
-        ]
+            ]
         let parameters = [
             "email": self.emailTextField.text!,
             "password": self.passwordTextField.text!
@@ -54,18 +54,35 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                 let httpResponse = response as? HTTPURLResponse
                 print(httpResponse!)
                 
-                let json = try! JSONSerialization.jsonObject(with: data!, options: []) as! [String:Any]
                 
-                self.currentUser.id = json["_id"] as? String
-                self.currentUser.email = json["email"] as? String
-                self.currentUser.nickName = json["nickName"] as? String
-                self.currentUser.password = json["password"] as? String
-
+                if httpResponse?.statusCode == 200 {
+                    
+                    let json = try! JSONSerialization.jsonObject(with: data!, options: []) as! [String:Any]
+                    
+                    self.currentUser.id = json["_id"] as? String
+                    self.currentUser.email = json["email"] as? String
+                    self.currentUser.nickName = json["nickName"] as? String
+                    self.currentUser.password = json["password"] as? String
+                    
+                    DispatchQueue.main.async {
+                        
+                        self.performSegue(withIdentifier: "SignUpSegue", sender: self)
+                        
+                        
+                    }
+                    
+                } else {
+                    
+         
+                    
+                }
+                
             }
         })
         
         dataTask.resume()
     }
+
     
     
     func postNewUser() {
@@ -144,9 +161,9 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         } else {
             self.currentUser.nickName = self.nameTextField.text
         }
-//        self.postNewUser()
+// This is comment out to avoid creating a lot of user while testing       
+        //self.postNewUser()
         self.authUser()
-        self.performSegue(withIdentifier: "SignUpSegue", sender: self)
 
         
     }
