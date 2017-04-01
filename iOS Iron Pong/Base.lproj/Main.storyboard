@@ -285,12 +285,28 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PublicUserCell" id="7uU-3U-NTL">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PublicUserCell" textLabel="h65-LD-v5N" detailTextLabel="An5-0K-xYi" style="IBUITableViewCellStyleValue1" id="7uU-3U-NTL">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7uU-3U-NTL" id="U9h-5f-l5I">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h65-LD-v5N">
+                                                    <rect key="frame" x="15" y="12" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="An5-0K-xYi">
+                                                    <rect key="frame" x="316" y="12" width="44" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -373,8 +389,26 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qyh-Z5-YQz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="9nH-q7-EyV"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="cancel" id="RJO-UY-zBp">
+                                        <connections>
+                                            <action selector="cancelButtonPressed:" destination="qhY-dZ-UMa" id="pbY-aG-W5D"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Qyh-Z5-YQz" firstAttribute="top" secondItem="YqR-G3-CUh" secondAttribute="top" id="JGf-si-aGQ"/>
+                            <constraint firstItem="Qyh-Z5-YQz" firstAttribute="leading" secondItem="YqR-G3-CUh" secondAttribute="leading" id="ZfG-rH-Fcn"/>
+                            <constraint firstAttribute="trailing" secondItem="Qyh-Z5-YQz" secondAttribute="trailing" id="y2O-cW-wCM"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="ttQ-8f-LBF" id="gcq-Mf-Rj7"/>
@@ -665,6 +699,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="4D3-30-oC0"/>
+        <segue reference="EZ4-Ln-oM1"/>
     </inferredMetricsTieBreakers>
 </document>
