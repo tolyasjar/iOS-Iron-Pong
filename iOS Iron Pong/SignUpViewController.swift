@@ -25,12 +25,71 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
 
     }
     
+    func authUser() {
+        
+        let headers = [
+            "authorization": "Bearer gUUfpJRjmPaVD2MTlibrrFtbded88WdJPiEG_u19CINNBRn7xiaG7gPWAoryBEwJ5289zNwANOtVQuRvQTJVdc2Ukblq72in08ryy0zZQYyaDQxHzp6a7vFqLkzZWHYx",
+            "content-type": "application/json",
+            "cache-control": "no-cache",
+            ]
+        let parameters = [
+            "email": self.emailTextField.text!,
+            "password": self.passwordTextField.text!
+            ] as [String : Any]
+        
+        let postData = try! JSONSerialization.data(withJSONObject: parameters, options: [])
+        
+        let request = NSMutableURLRequest(url: NSURL(string: "https://iron-pong.herokuapp.com/auth/login")! as URL,
+                                          cachePolicy: .useProtocolCachePolicy,
+                                          timeoutInterval: 10.0)
+        request.httpMethod = "POST"
+        request.allHTTPHeaderFields = headers
+        request.httpBody = postData as Data
+        
+        let session = URLSession.shared
+        let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
+            if (error != nil) {
+                print(error!)
+            } else {
+                let httpResponse = response as? HTTPURLResponse
+                print(httpResponse!)
+                
+                
+                if httpResponse?.statusCode == 200 {
+                    
+                    let json = try! JSONSerialization.jsonObject(with: data!, options: []) as! [String:Any]
+                    
+                    self.currentUser.id = json["_id"] as? String
+                    self.currentUser.email = json["email"] as? String
+                    self.currentUser.nickName = json["nickName"] as? String
+                    self.currentUser.password = json["password"] as? String
+                    
+                    DispatchQueue.main.async {
+                        
+                        self.performSegue(withIdentifier: "SignUpSegue", sender: self)
+                        
+                        
+                    }
+                    
+                } else {
+                    
+         
+                    
+                }
+                
+            }
+        })
+        
+        dataTask.resume()
+    }
+
+    
+    
     func postNewUser() {
         
         let headers = [
             "content-type": "application/json",
             "cache-control": "no-cache",
-            "postman-token": "e0709e63-ddcf-30b3-dfdf-bb349224d314"
         ]
         let parameters = [
             "email": self.emailTextField.text!,
@@ -54,6 +113,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             } else {
                 let httpResponse = response as? HTTPURLResponse
                 print(httpResponse!)
+                
             }
         })
         
@@ -101,8 +161,9 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         } else {
             self.currentUser.nickName = self.nameTextField.text
         }
-        self.postNewUser()
-        self.performSegue(withIdentifier: "SignUpSegue", sender: self)
+// This is comment out to avoid creating a lot of user while testing       
+        //self.postNewUser()
+        self.authUser()
 
         
     }
