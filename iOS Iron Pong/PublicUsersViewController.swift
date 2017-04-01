@@ -30,11 +30,27 @@ class PublicUsersViewController: UIViewController, UITableViewDelegate, UITableV
             for dictionary in json {
                 print(dictionary)
                 let name = dictionary["nickName"] as! String
-                let wins = dictionary["wins"] as! Double
-                let user = User()
-                user.nickName = name
-                user.wins = wins
-                self.users.append(user)
+                
+                if dictionary["wins"] == nil {
+                    
+                    let user = User()
+                    user.nickName = name
+                    self.users.append(user)
+                    
+                } else {
+                    
+                    let wins = dictionary["wins"] as! Double
+                    
+                    let user = User()
+                    user.nickName = name
+                    user.wins = wins
+                    self.users.append(user)
+
+                    
+                }
+                
+
+
             }
             DispatchQueue.main.async {
                 self.queueTableView.reloadData()
@@ -62,10 +78,21 @@ class PublicUsersViewController: UIViewController, UITableViewDelegate, UITableV
         
         let user = users[indexPath.row]
         
-        cell.textLabel?.text = user.nickName
-        let wins = String(describing: user.wins!)
+        
+        if user.wins == nil {
+            cell.textLabel?.text = user.nickName
+            cell.detailTextLabel?.text = "Wins: 0"
 
-        cell.detailTextLabel?.text = "Wins: \(wins)"
+        } else {
+            cell.textLabel?.text = user.nickName
+
+            let wins = String(describing: Int(user.wins!))
+
+            cell.detailTextLabel?.text = "Wins: \(wins)"
+
+        }
+        
+
         
         // Configure the cell...
         
