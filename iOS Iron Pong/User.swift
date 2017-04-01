@@ -25,6 +25,6 @@ class User {
     var signatureMove: String?
     var homeTown: String?
     
-    var id :Double?
+    var id :String?
     
 }
