@@ -23,6 +23,7 @@
 		C625AC1A1E8ED6FB00D5D43D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C625AC191E8ED6FB00D5D43D /* User.swift */; };
 		C625AC1D1E8ED71100D5D43D /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = C625AC1C1E8ED71100D5D43D /* Game.swift */; };
 		C625AC1F1E8EFD1600D5D43D /* PublicUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C625AC1E1E8EFD1600D5D43D /* PublicUsersViewController.swift */; };
+		C625AC421E902E4200D5D43D /* ReclaimOldAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C625AC411E902E4200D5D43D /* ReclaimOldAccountViewController.swift */; };
 		C81456C01E8FD7FD007E9F07 /* CurrentUserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81456BF1E8FD7FD007E9F07 /* CurrentUserTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		C625AC191E8ED6FB00D5D43D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = "iOS Iron Pong/User.swift"; sourceTree = "<group>"; };
 		C625AC1C1E8ED71100D5D43D /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Game.swift; path = "iOS Iron Pong/Game.swift"; sourceTree = "<group>"; };
 		C625AC1E1E8EFD1600D5D43D /* PublicUsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicUsersViewController.swift; sourceTree = "<group>"; };
+		C625AC411E902E4200D5D43D /* ReclaimOldAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReclaimOldAccountViewController.swift; sourceTree = "<group>"; };
 		C81456BF1E8FD7FD007E9F07 /* CurrentUserTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CurrentUserTableViewController.swift; path = ../CurrentUserTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +104,7 @@
 				C625AC0F1E8EB9D300D5D43D /* UserProfileViewController.swift */,
 				C625AC1E1E8EFD1600D5D43D /* PublicUsersViewController.swift */,
 				C81456BF1E8FD7FD007E9F07 /* CurrentUserTableViewController.swift */,
+				C625AC411E902E4200D5D43D /* ReclaimOldAccountViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				C625AC1D1E8ED71100D5D43D /* Game.swift in Sources */,
 				C625AC101E8EB9D300D5D43D /* UserProfileViewController.swift in Sources */,
 				C625AC091E8EB90400D5D43D /* ScoreBoardTableViewController.swift in Sources */,
+				C625AC421E902E4200D5D43D /* ReclaimOldAccountViewController.swift in Sources */,
 				C81456C01E8FD7FD007E9F07 /* CurrentUserTableViewController.swift in Sources */,
 				C625AC071E8EB8DB00D5D43D /* QueueViewController.swift in Sources */,
 				C625AC031E8EB8B200D5D43D /* GameViewController.swift in Sources */,

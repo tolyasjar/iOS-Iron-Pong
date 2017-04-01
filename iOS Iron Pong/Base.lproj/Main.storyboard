@@ -44,7 +44,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="401-44-rOG">
-                                <rect key="frame" x="135" y="457" width="104" height="70"/>
+                                <rect key="frame" x="135" y="401" width="104" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Sign Up"/>
@@ -59,6 +59,16 @@
                                 <state key="normal" title="Leader Board"/>
                                 <connections>
                                     <segue destination="bGx-2C-pEb" kind="show" id="Qde-nc-uEp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snp-FU-Glf">
+                                <rect key="frame" x="82" y="479" width="211" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Reclaim Old Account"/>
+                                <connections>
+                                    <action selector="signUpButtonPressed:" destination="nv4-1O-mY6" eventType="touchUpInside" id="Q1G-Ke-Isd"/>
+                                    <segue destination="8wY-XC-67B" kind="show" id="iXw-15-Okt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -346,7 +356,41 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="znC-kg-3zV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-643" y="991"/>
+            <point key="canvasLocation" x="-1489" y="986"/>
+        </scene>
+        <!--Reclaim Old Account View Controller-->
+        <scene sceneID="eeK-Tt-JBi">
+            <objects>
+                <viewController id="8wY-XC-67B" customClass="ReclaimOldAccountViewController" customModule="iOS_Iron_Pong" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2g9-vB-WvS"/>
+                        <viewControllerLayoutGuide type="bottom" id="bn1-oX-6Wb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h7a-Gi-km0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xDg-we-QEh">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="zX9-UG-xIi"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="cancel" id="Xst-sv-Zzj"/>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xDg-we-QEh" firstAttribute="top" secondItem="h7a-Gi-km0" secondAttribute="top" id="cQe-sO-7Zs"/>
+                            <constraint firstAttribute="trailing" secondItem="xDg-we-QEh" secondAttribute="trailing" id="fnQ-hv-ZqL"/>
+                            <constraint firstItem="xDg-we-QEh" firstAttribute="leading" secondItem="h7a-Gi-km0" secondAttribute="leading" id="y8F-p1-ptG"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P3H-om-K3U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-692" y="986"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="vp2-vo-0Vt">
