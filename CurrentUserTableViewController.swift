@@ -9,16 +9,21 @@
 import UIKit
 
 class CurrentUserTableViewController: UITableViewController {
-    @IBOutlet weak var nameLbl: UILabel!
+    
     @IBOutlet weak var emailLbl: UILabel!
     @IBOutlet weak var passwordLbl: UILabel!
-    @IBOutlet weak var catchPhraseLbl: UILabel!
-    @IBOutlet weak var paddleGripStyleLbl: UILabel!
+    @IBOutlet weak var nicknameLbl: UILabel!
     
-    @IBOutlet weak var signatureMoveLbl: UILabel!
     @IBOutlet weak var homeTownLbl: UILabel!
+    @IBOutlet weak var signatureMoveLbl: UILabel!
+    @IBOutlet weak var paddleGripStyleLbl: UILabel!
+    @IBOutlet weak var catchPhraseLbl: UILabel!
+    
     @IBOutlet weak var winsLbl: UILabel!
     @IBOutlet weak var lossesLbl: UILabel!
+    @IBOutlet weak var winstreakLbl: UILabel!
+    @IBOutlet weak var winRatioLbl: UILabel!
+    @IBOutlet weak var totalGamesLbl: UILabel!
     
     var users = [User]()
     
@@ -28,15 +33,22 @@ class CurrentUserTableViewController: UITableViewController {
         populateDummyUsers()
         // Assumption CurrentUser = users[0]
         let currentUser = users[0]
-        self.nameLbl.text = currentUser.nickName
+        
+        
         self.emailLbl.text = currentUser.email
         self.passwordLbl.text = currentUser.password
+        self.nicknameLbl.text = currentUser.nickName
+        
         self.homeTownLbl.text = currentUser.homeTown
-        self.paddleGripStyleLbl.text = currentUser.paddleGripStyle
         self.signatureMoveLbl.text = currentUser.signatureMove
+        self.paddleGripStyleLbl.text = currentUser.paddleGripStyle
+        self.catchPhraseLbl.text = currentUser.catchPhrase
+        
         self.winsLbl.text = "\(currentUser.wins!)"
         self.lossesLbl.text = "\(currentUser.losses!)"
-        self.catchPhraseLbl.text = currentUser.catchPhrase
+        //self.winRatioLbl.text = "\(currentUser.winRatio!)"
+        //self.winstreakLbl.text = "\(currentUser.winStreak!)"
+        //self.totalGamesLbl.text = "\(currentUser.totalGames!)"
         
     }
     
@@ -54,17 +66,20 @@ class CurrentUserTableViewController: UITableViewController {
                     
                     for item in jsonDict {
                         let user = User()
-                        user.nickName = item["nickName"] as? String
                         user.email = item["email"] as? String
                         user.password = item["password"] as? String
+                        user.nickName = item["nickName"] as? String
                         user.avatarURL = item["avatarURL"] as? String
-                        user.catchPhrase = item ["catchPhrase"] as? String
+                        
+                        user.homeTown = item["homeTown"] as? String
                         user.signatureMove = item["signatureMove"] as? String
                         user.paddleGripStyle = item["paddleGripStyle"] as? String
-                        user.homeTown = item["homeTown"] as? String
+                        user.catchPhrase = item ["catchPhrase"] as? String
+                        
                         user.wins = item["wins"] as? Double
                         user.losses = item["losses"] as? Double
                         user.winStreak = item["winStreak"] as? Double
+                        user.winRatio = item["winRatio"] as? Double
                         user.totalGames = item["totalGames"] as? Double
                         
                         users.append(user)
@@ -76,11 +91,13 @@ class CurrentUserTableViewController: UITableViewController {
         }
     }
     
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        let height =  0.001
+        return CGFloat(height)
+    }
     
     //MARK:- Edit Alert box will be displayed
     @IBAction func editButtonPressed(_ sender: Any) {
-        
-        
         
         
     }
