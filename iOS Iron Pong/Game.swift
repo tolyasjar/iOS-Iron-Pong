@@ -17,7 +17,7 @@ class Game {
     var playerOneScore: Double?
     var playerTwoScore: Double?
 
-    var id :Double?
+    var id :String?
 
     
 }

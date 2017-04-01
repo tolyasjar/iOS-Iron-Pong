@@ -24,6 +24,75 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         self.passwordTextField.delegate = self
 
     }
+    
+    func authUser() {
+        
+        let headers = [
+            "authorization": "Bearer gUUfpJRjmPaVD2MTlibrrFtbded88WdJPiEG_u19CINNBRn7xiaG7gPWAoryBEwJ5289zNwANOtVQuRvQTJVdc2Ukblq72in08ryy0zZQYyaDQxHzp6a7vFqLkzZWHYx",
+            "content-type": "application/json",
+            "cache-control": "no-cache",
+            ]
+        let parameters = [
+            "email": self.emailTextField.text!,
+            "password": self.passwordTextField.text!
+            ] as [String : Any]
+        
+        let postData = try! JSONSerialization.data(withJSONObject: parameters, options: [])
+        
+        let request = NSMutableURLRequest(url: NSURL(string: "https://iron-pong.herokuapp.com/auth/login")! as URL,
+                                          cachePolicy: .useProtocolCachePolicy,
+                                          timeoutInterval: 10.0)
+        request.httpMethod = "POST"
+        request.allHTTPHeaderFields = headers
+        request.httpBody = postData as Data
+        
+        let session = URLSession.shared
+        let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
+            if (error != nil) {
+                print(error!)
+            } else {
+                let httpResponse = response as? HTTPURLResponse
+                print(httpResponse!)
+                
+            
+                if httpResponse?.statusCode == 200 {
+                    
+                    let json = try! JSONSerialization.jsonObject(with: data!, options: []) as! [String:Any]
+                    
+                    self.currentUser.id = json["_id"] as? String
+                    self.currentUser.email = json["email"] as? String
+                    self.currentUser.nickName = json["nickName"] as? String
+                    self.currentUser.password = json["password"] as? String
+                    
+                    DispatchQueue.main.async {
+                        
+                        self.performSegue(withIdentifier: "SignInSegue", sender: self)
+
+                        
+                    }
+                    
+                } else {
+                    
+                    DispatchQueue.main.async {
+                        
+                        let alertController = UIAlertController(title: "Oops!", message: "Invalid Email or Password", preferredStyle: .alert)
+                        let dismissAction = UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.cancel) {
+                            UIAlertAction in
+                        }
+                        alertController.addAction(dismissAction)
+                        self.present(alertController, animated: true, completion: nil)
+                        
+                    }
+                    
+                }
+                
+            }
+        })
+        
+        dataTask.resume()
+    }
+    
+
 
     @IBAction func signInButtonPressed(_ sender: Any) {
         
@@ -52,7 +121,8 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
             self.currentUser.password = self.passwordTextField.text
         }
         
-        self.performSegue(withIdentifier: "SignInSegue", sender: self)
+        self.authUser()
+ //       self.performSegue(withIdentifier: "SignInSegue", sender: self)
 
         
     }
