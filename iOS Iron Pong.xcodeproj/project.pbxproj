@@ -23,6 +23,7 @@
 		C625AC1A1E8ED6FB00D5D43D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C625AC191E8ED6FB00D5D43D /* User.swift */; };
 		C625AC1D1E8ED71100D5D43D /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = C625AC1C1E8ED71100D5D43D /* Game.swift */; };
 		C625AC1F1E8EFD1600D5D43D /* PublicUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C625AC1E1E8EFD1600D5D43D /* PublicUsersViewController.swift */; };
+		C81456C01E8FD7FD007E9F07 /* CurrentUserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81456BF1E8FD7FD007E9F07 /* CurrentUserTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,11 +40,12 @@
 		C625AC0A1E8EB92700D5D43D /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		C625AC0C1E8EB93900D5D43D /* UsersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
 		C625AC0F1E8EB9D300D5D43D /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
-		C625AC131E8EC54F00D5D43D /* mockUserAPI.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mockUserAPI.json; sourceTree = "<group>"; };
-		C625AC171E8ECFD600D5D43D /* mockGameAPI.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mockGameAPI.json; sourceTree = "<group>"; };
-		C625AC191E8ED6FB00D5D43D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		C625AC1C1E8ED71100D5D43D /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		C625AC131E8EC54F00D5D43D /* mockUserAPI.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = mockUserAPI.json; path = "iOS Iron Pong/mockUserAPI.json"; sourceTree = "<group>"; };
+		C625AC171E8ECFD600D5D43D /* mockGameAPI.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = mockGameAPI.json; path = "iOS Iron Pong/mockGameAPI.json"; sourceTree = "<group>"; };
+		C625AC191E8ED6FB00D5D43D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = "iOS Iron Pong/User.swift"; sourceTree = "<group>"; };
+		C625AC1C1E8ED71100D5D43D /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Game.swift; path = "iOS Iron Pong/Game.swift"; sourceTree = "<group>"; };
 		C625AC1E1E8EFD1600D5D43D /* PublicUsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicUsersViewController.swift; sourceTree = "<group>"; };
+		C81456BF1E8FD7FD007E9F07 /* CurrentUserTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CurrentUserTableViewController.swift; path = ../CurrentUserTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,8 @@
 		C625ABE41E8EB80F00D5D43D = {
 			isa = PBXGroup;
 			children = (
+				C81456BE1E8FD7D5007E9F07 /* Model */,
+				C81456BD1E8FD7A9007E9F07 /* Dummy API */,
 				C625ABEF1E8EB80F00D5D43D /* iOS Iron Pong */,
 				C625ABEE1E8EB80F00D5D43D /* Products */,
 			);
@@ -76,16 +80,12 @@
 		C625ABEF1E8EB80F00D5D43D /* iOS Iron Pong */ = {
 			isa = PBXGroup;
 			children = (
-				C625AC171E8ECFD600D5D43D /* mockGameAPI.json */,
-				C625AC131E8EC54F00D5D43D /* mockUserAPI.json */,
 				C625AC0E1E8EB93E00D5D43D /* ViewControllers */,
 				C625ABF01E8EB80F00D5D43D /* AppDelegate.swift */,
 				C625ABF41E8EB80F00D5D43D /* Main.storyboard */,
 				C625ABF71E8EB80F00D5D43D /* Assets.xcassets */,
 				C625ABF91E8EB80F00D5D43D /* LaunchScreen.storyboard */,
 				C625ABFC1E8EB80F00D5D43D /* Info.plist */,
-				C625AC191E8ED6FB00D5D43D /* User.swift */,
-				C625AC1C1E8ED71100D5D43D /* Game.swift */,
 			);
 			path = "iOS Iron Pong";
 			sourceTree = "<group>";
@@ -101,8 +101,27 @@
 				C625AC0C1E8EB93900D5D43D /* UsersTableViewController.swift */,
 				C625AC0F1E8EB9D300D5D43D /* UserProfileViewController.swift */,
 				C625AC1E1E8EFD1600D5D43D /* PublicUsersViewController.swift */,
+				C81456BF1E8FD7FD007E9F07 /* CurrentUserTableViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C81456BD1E8FD7A9007E9F07 /* Dummy API */ = {
+			isa = PBXGroup;
+			children = (
+				C625AC171E8ECFD600D5D43D /* mockGameAPI.json */,
+				C625AC131E8EC54F00D5D43D /* mockUserAPI.json */,
+			);
+			name = "Dummy API";
+			sourceTree = "<group>";
+		};
+		C81456BE1E8FD7D5007E9F07 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C625AC191E8ED6FB00D5D43D /* User.swift */,
+				C625AC1C1E8ED71100D5D43D /* Game.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +203,7 @@
 				C625AC1D1E8ED71100D5D43D /* Game.swift in Sources */,
 				C625AC101E8EB9D300D5D43D /* UserProfileViewController.swift in Sources */,
 				C625AC091E8EB90400D5D43D /* ScoreBoardTableViewController.swift in Sources */,
+				C81456C01E8FD7FD007E9F07 /* CurrentUserTableViewController.swift in Sources */,
 				C625AC071E8EB8DB00D5D43D /* QueueViewController.swift in Sources */,
 				C625AC031E8EB8B200D5D43D /* GameViewController.swift in Sources */,
 				C625AC1F1E8EFD1600D5D43D /* PublicUsersViewController.swift in Sources */,
