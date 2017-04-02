@@ -78,6 +78,24 @@ class UpdateOldAccountViewController: UIViewController {
         })
         
         dataTask.resume()
+        
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "SignUpSegue", sender: self)
+        }
+    }
+    
+    
+    func saveCurrentUser() {
+        
+        let nickName = self.nameTextField.text
+        let _id =  self.accountId
+        
+        let userDefaults = Foundation.UserDefaults.standard
+        userDefaults.set( nickName, forKey: "nickName")
+        userDefaults.set( _id, forKey: "_id")
+        
+        userDefaults.synchronize()
+        
     }
 
 

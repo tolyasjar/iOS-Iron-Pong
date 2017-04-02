@@ -29,7 +29,6 @@ class ReclaimAccountViewController: UIViewController {
             for dictionary in json {
                 print(dictionary)
                 let nickName = dictionary["nickName"] as! String
-                
                 if dictionary["claimed"] == nil {
                     
                 } else {
@@ -37,7 +36,7 @@ class ReclaimAccountViewController: UIViewController {
                     
                     let claimed = dictionary["claimed"] as! Bool
                     
-                    if nickName == self.nameTextField.text! || claimed == false {
+                    if nickName == self.nameTextField.text! && claimed == false {
                         
                         self.accountId = dictionary["_id"] as! String
                         
@@ -45,11 +44,7 @@ class ReclaimAccountViewController: UIViewController {
                         
                         
                     }
-                    
-                    
                 }
-                
-
                 
             }
             }.resume()

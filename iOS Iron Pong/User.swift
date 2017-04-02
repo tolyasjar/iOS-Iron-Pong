@@ -26,12 +26,6 @@ class User {
     var homeTown: String?
     
     var id :String?
-    
-    init(){
-    }
-    
-    init(email :String){
-        self.email = email
-    }
+
     
 }
