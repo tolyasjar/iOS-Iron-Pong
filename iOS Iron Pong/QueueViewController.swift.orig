@@ -20,8 +20,10 @@ class QueueViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         
+<<<<<<< HEAD
         
         // Do any additional setup after loading the view.
+=======
         //assumption current User value   jamesjosephsewell@gmail.com
         currentUser.email = "test@gmail.com"
         currentUser.password = "somepassword"
@@ -47,6 +49,7 @@ class QueueViewController: UIViewController, UITableViewDelegate, UITableViewDat
     {
         queueUsers.removeAll()
         print("Refresh Queue")
+>>>>>>> 8601fca40c38a74dbdcb06496dd2b7b879c07b94
         self.getQueue()
     }
     

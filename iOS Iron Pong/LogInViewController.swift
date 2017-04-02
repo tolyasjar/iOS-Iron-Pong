@@ -64,8 +64,9 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
                     self.currentUser.nickName = json["nickName"] as? String
                     self.currentUser.password = json["password"] as? String
                     
+                    self.saveCurrentUser()
+
                     DispatchQueue.main.async {
-                        
                         self.performSegue(withIdentifier: "SignInSegue", sender: self)
 
                         
@@ -125,6 +126,19 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
 
         
     }
+    
+    func saveCurrentUser() {
+        
+        let nickName = self.currentUser.nickName
+        let _id =  self.currentUser.id
+        
+        let userDefaults = Foundation.UserDefaults.standard
+        userDefaults.set( nickName, forKey: "nickName")
+        userDefaults.set( _id, forKey: "_id")
+
+        userDefaults.synchronize()
+        
+    }
     @IBAction func signUpButtonPressed(_ sender: Any) {
         
         
@@ -138,6 +152,12 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    open override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
+        get {
+            return .portrait
+        }
     }
 
 

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ReclaimAccountViewController: UIViewController {
+class ReclaimAccountViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var nameTextField: UITextField!
     
@@ -18,6 +18,8 @@ class ReclaimAccountViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        
+        self.nameTextField.delegate = self
     }
     
     func findUser() {
@@ -29,7 +31,6 @@ class ReclaimAccountViewController: UIViewController {
             for dictionary in json {
                 print(dictionary)
                 let nickName = dictionary["nickName"] as! String
-                
                 if dictionary["claimed"] == nil {
                     
                 } else {
@@ -37,7 +38,7 @@ class ReclaimAccountViewController: UIViewController {
                     
                     let claimed = dictionary["claimed"] as! Bool
                     
-                    if nickName == self.nameTextField.text! || claimed == false {
+                    if nickName == self.nameTextField.text! && claimed == false {
                         
                         self.accountId = dictionary["_id"] as! String
                         
@@ -45,12 +46,37 @@ class ReclaimAccountViewController: UIViewController {
                         
                         
                     }
-                    
-                    
                 }
                 
-
+            }
+            
+            DispatchQueue.main.async {
                 
+                if self.accountId == nil {
+                    //user name not found
+                    
+                    let alertController = UIAlertController(title: "Oops!", message: "User Not Found or Already Claimed", preferredStyle: .alert)
+                    let dismissAction = UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.cancel) {
+                        UIAlertAction in
+                    }
+                    alertController.addAction(dismissAction)
+                    self.present(alertController, animated: true, completion: nil)
+                } else {
+                    
+                    let alertController = UIAlertController(title: "Nice!", message: "User Found", preferredStyle: .alert)
+                    let continueAction = UIAlertAction(title: "Continue", style: UIAlertActionStyle.default) {
+                        UIAlertAction in
+                        self.performSegue(withIdentifier: "ReclaimOldAccountSegue", sender: self)
+                        
+                    }
+                    let dismissAction = UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.cancel) {
+                        UIAlertAction in
+                        self.accountId = nil
+                    }
+                    alertController.addAction(continueAction)
+                    alertController.addAction(dismissAction)
+                    self.present(alertController, animated: true, completion: nil)
+                }
             }
             }.resume()
         
@@ -72,34 +98,7 @@ class ReclaimAccountViewController: UIViewController {
             
             //finds the user
             self.findUser()
-            
-            if self.accountId == nil {
-                //user name not found
-                
-                let alertController = UIAlertController(title: "Oops!", message: "User Not Found or Already Claimed", preferredStyle: .alert)
-                let dismissAction = UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.cancel) {
-                    UIAlertAction in
-                }
-                alertController.addAction(dismissAction)
-                self.present(alertController, animated: true, completion: nil)
-            } else {
-                
-                let alertController = UIAlertController(title: "Nice!", message: "User Found", preferredStyle: .alert)
-                let continueAction = UIAlertAction(title: "Continue", style: UIAlertActionStyle.default) {
-                    UIAlertAction in
-                    self.performSegue(withIdentifier: "ReclaimOldAccountSegue", sender: self)
-
-                }
-                let dismissAction = UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.cancel) {
-                    UIAlertAction in
-                }
-                alertController.addAction(continueAction)
-                alertController.addAction(dismissAction)
-                self.present(alertController, animated: true, completion: nil)
-                
-                
-            }
-            
+                      
         }
         
     }
@@ -123,6 +122,10 @@ class ReclaimAccountViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 
 
 }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UpdateOldAccountViewController: UIViewController {
+class UpdateOldAccountViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -21,6 +21,10 @@ class UpdateOldAccountViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        self.emailTextField.delegate = self
+        self.nameTextField.delegate = self
+        self.passwordTextField.delegate = self
         
     }
     
@@ -79,11 +83,34 @@ class UpdateOldAccountViewController: UIViewController {
         })
         
         dataTask.resume()
+        
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "SignUpSegue", sender: self)
+        }
+    }
+    
+    
+    func saveCurrentUser() {
+        
+        let nickName = self.nameTextField.text
+        let _id =  self.accountId
+        
+        let userDefaults = Foundation.UserDefaults.standard
+        userDefaults.set( nickName, forKey: "nickName")
+        userDefaults.set( _id, forKey: "_id")
+        
+        userDefaults.synchronize()
+        
     }
 
 
     @IBAction func cancelButtonPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 
 }

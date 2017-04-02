@@ -64,16 +64,15 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
                     self.currentUser.nickName = json["nickName"] as? String
                     self.currentUser.password = json["password"] as? String
                     
+                    self.saveCurrentUser()
                     DispatchQueue.main.async {
                         
                         self.performSegue(withIdentifier: "SignUpSegue", sender: self)
-                        
                         
                     }
                     
                 } else {
                     
-         
                     
                 }
                 
@@ -177,6 +176,19 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    func saveCurrentUser() {
+        
+        let nickName = self.currentUser.nickName
+        let _id =  self.currentUser.id
+        
+        let userDefaults = Foundation.UserDefaults.standard
+        userDefaults.set( nickName, forKey: "nickName")
+        userDefaults.set( _id, forKey: "_id")
+        
+        userDefaults.synchronize()
+        
     }
 
 
