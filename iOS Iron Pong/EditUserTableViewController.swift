@@ -8,7 +8,14 @@
 
 import UIKit
 
-class EditUserProfileTableViewController: UITableViewController {
+protocol UpdatingProfile: class {
+    
+    func updateProfileDidSave(_ user: User)
+}
+
+class EditUserProfileTableViewController: UITableViewController, UITextFieldDelegate  {
+    
+    weak var updatingUserProfiledelegate: UpdatingProfile!
     
     @IBOutlet weak var avatarbtn: UIButton!
     
@@ -33,7 +40,24 @@ class EditUserProfileTableViewController: UITableViewController {
     
     @IBAction func saveBtnPressed(_ sender: Any) {
         // Save user to DB
+        let user = User()
+        user.email = emailTxtField.text
+        user.password = passwordTxtField.text
+        user.nickName = nickNameTxtField.text
+        
+        user.homeTown  = homeTownTxtField.text
+        user.signatureMove  = signatureMoveTxtField.text
+        user.paddleGripStyle  = paddleGripStyleTxtField.text
+        user.catchPhrase = nickNameTxtField.text
+        
+        self.updatingUserProfiledelegate.updateProfileDidSave(user)
+
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
 
