@@ -57,6 +57,7 @@ class UpdateOldAccountViewController: UIViewController {
             "claimed": true
             ] as [String : Any]
         
+        
         let postData = try! JSONSerialization.data(withJSONObject: parameters, options: [])
         
  

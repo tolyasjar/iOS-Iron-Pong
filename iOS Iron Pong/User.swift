@@ -14,24 +14,19 @@ class User {
     var password :String?
     var nickName: String?
     var createdAt: Date?
+    var avatarURL: String?
+    
     var wins: Double?
     var losses: Double?
     var winStreak: Double?
     var winRatio: Double?
     var totalGames: Double?
-    var avatarURL: String?
+    
     var catchPhrase: String?
     var paddleGripStyle: String?
     var signatureMove: String?
     var homeTown: String?
     
     var id :String?
-    
-    init(){
-    }
-    
-    init(email :String){
-        self.email = email
-    }
-    
+
 }
