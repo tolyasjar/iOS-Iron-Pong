@@ -25,6 +25,8 @@ class CurrentUserTableViewController: UITableViewController, UpdatingProfile {
     @IBOutlet weak var winRatioLbl: UILabel!
     @IBOutlet weak var totalGamesLbl: UILabel!
     
+    var currentUser = User()
+    
     var users = [User]()
     
     override func viewDidLoad() {
@@ -32,7 +34,7 @@ class CurrentUserTableViewController: UITableViewController, UpdatingProfile {
         
         populateDummyUsers()
         // Assumption CurrentUser = users[0]
-        let currentUser = users[0]
+        currentUser = users[0]
         
         
         self.emailLbl.text = currentUser.email
@@ -114,7 +116,6 @@ class CurrentUserTableViewController: UITableViewController, UpdatingProfile {
         self.paddleGripStyleLbl.text = user.paddleGripStyle
         self.catchPhraseLbl.text = user.catchPhrase
 
-        // PUT to API
         
     }
 
@@ -128,6 +129,8 @@ class CurrentUserTableViewController: UITableViewController, UpdatingProfile {
         
             let editUserTableViewController = nextViewController.topViewController as? EditUserProfileTableViewController
             editUserTableViewController?.updatingUserProfiledelegate = self
+            editUserTableViewController?.currentUser = currentUser
+        
         }
     
 }
