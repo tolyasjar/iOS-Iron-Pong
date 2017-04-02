@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tc3-JG-T9r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yTz-Wi-8nD">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -358,7 +358,7 @@
             </objects>
             <point key="canvasLocation" x="3224.8000000000002" y="-1164.4677661169417"/>
         </scene>
-        <!--Queue View Controller-->
+        <!--Game Queue-->
         <scene sceneID="kFB-qe-9fO">
             <objects>
                 <viewController id="wwD-jx-qVx" customClass="QueueViewController" customModule="iOS_Iron_Pong" customModuleProvider="target" sceneMemberID="viewController">
@@ -414,6 +414,17 @@
                             <constraint firstItem="kFQ-WH-fvE" firstAttribute="leading" secondItem="vXW-Nh-5sh" secondAttribute="leading" id="ziE-GT-9vH"/>
                         </constraints>
                     </view>
+<<<<<<< HEAD
+                    <tabBarItem key="tabBarItem" title="Queue" image="Numbered List-30.png" id="snu-TT-fHY"/>
+=======
+                    <navigationItem key="navigationItem" title="Game Queue" id="gOx-DZ-r1o">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="mMy-Rr-BNh">
+                            <connections>
+                                <action selector="addCurrentUserTOQueue:" destination="wwD-jx-qVx" id="RoC-YE-ofz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+>>>>>>> 8601fca40c38a74dbdcb06496dd2b7b879c07b94
                     <connections>
                         <outlet property="queueTableView" destination="ZPb-8N-Cem" id="izY-HL-emY"/>
                         <outlet property="startTheGameBtn" destination="kFQ-WH-fvE" id="Cja-bq-6Jx"/>
@@ -546,7 +557,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jas-n0-EWa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2180" y="902"/>
+            <point key="canvasLocation" x="2185" y="822"/>
         </scene>
         <!--User Profile View Controller-->
         <scene sceneID="j9g-0g-6dD">
@@ -1301,6 +1312,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Numbered List-30.png" width="30" height="30"/>
         <image name="User-30.png" width="30" height="30"/>
         <image name="ironPongLogoWhite.png" width="866" height="580"/>
         <image name="score-30.png" width="30" height="30"/>

@@ -29,5 +29,8 @@ class User {
     
     var id :String?
 
-
+<<<<<<< HEAD
+    
+=======
+>>>>>>> 8601fca40c38a74dbdcb06496dd2b7b879c07b94
 }
