@@ -20,6 +20,8 @@ class PublicUsersViewController: UIViewController, UITableViewDelegate, UITableV
         // Do any additional setup after loading the view.
     
         self.getUsers()
+        
+        
     }
     
     func getUsers() {
@@ -96,6 +98,9 @@ class PublicUsersViewController: UIViewController, UITableViewDelegate, UITableV
 
         
         // Configure the cell...
+        
+        cell.textLabel?.textColor = UIColor.white
+        cell.detailTextLabel?.textColor = UIColor.white
         
         return cell
     }
