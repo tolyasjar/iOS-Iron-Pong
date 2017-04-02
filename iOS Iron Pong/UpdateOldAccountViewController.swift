@@ -14,16 +14,32 @@ class UpdateOldAccountViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
 
+    var accountId :String!
     var currentUser = User()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
     }
     
     @IBAction func updateButtonPressed() {
         
+        if self.emailTextField.text == "" && self.passwordTextField.text == "" && self.nameTextField.text == "" {
+            
+            let alertController = UIAlertController(title: "Oops!", message: "Please fill in required fields", preferredStyle: .alert)
+            let dismissAction = UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.cancel) {
+                UIAlertAction in
+            }
+            alertController.addAction(dismissAction)
+            self.present(alertController, animated: true, completion: nil)
+            
+        } else {
+            
+            self.updateUser()
+            
+        }
     }
     
     
@@ -35,14 +51,16 @@ class UpdateOldAccountViewController: UIViewController {
             "cache-control": "no-cache",
         ]
         let parameters = [
+            "nickName": self.nameTextField.text!,
             "email": self.emailTextField.text!,
             "password": self.passwordTextField.text!,
-            "claimed": true
+            "claimed": true as Bool
             ] as [String : Any]
         
         let postData = try! JSONSerialization.data(withJSONObject: parameters, options: [])
         
-        let request = NSMutableURLRequest(url: NSURL(string: "https://iron-pong.herokuapp.com/api/users/58e03515011d5e001179643c")! as URL,
+ 
+        let request = NSMutableURLRequest(url: NSURL(string: "https://iron-pong.herokuapp.com/api/users/\(accountId!)")! as URL,
                                           cachePolicy: .useProtocolCachePolicy,
                                           timeoutInterval: 10.0)
         request.httpMethod = "PUT"

@@ -40,7 +40,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign In"/>
                                 <connections>
-                                    <action selector="signInButtonPressed:" destination="nv4-1O-mY6" eventType="touchUpInside" id="P38-b1-ORs"/>
+                                    <action selector="signInButtonPressed:" destination="nv4-1O-mY6" eventType="touchUpInside" id="pnt-qA-8Im"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="401-44-rOG">
@@ -49,7 +49,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
-                                    <action selector="signUpButtonPressed:" destination="nv4-1O-mY6" eventType="touchUpInside" id="ejV-Hb-e0o"/>
+                                    <action selector="signUpButtonPressed:" destination="nv4-1O-mY6" eventType="touchUpInside" id="tDY-St-V0U"/>
                                     <segue destination="qhY-dZ-UMa" kind="show" identifier="" id="80U-Rz-Ieq"/>
                                 </connections>
                             </button>
@@ -67,17 +67,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Reclaim Old Account"/>
                                 <connections>
-                                    <action selector="reclaimOldAccountButtonPrseed" destination="nv4-1O-mY6" eventType="touchUpInside" id="Udw-rO-jMD"/>
-                                    <action selector="signUpButtonPressed:" destination="nv4-1O-mY6" eventType="touchUpInside" id="Q1G-Ke-Isd"/>
-                                    <segue destination="C9h-Bt-QwJ" kind="show" id="jf8-na-Mul"/>
+                                    <segue destination="C9h-Bt-QwJ" kind="show" id="XUb-JO-Uzg"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="emailTextField" destination="A0U-mE-Daj" id="BQ7-Jv-mvF"/>
-                        <outlet property="passwordTextField" destination="tj3-4z-Pd1" id="n3G-8A-rtM"/>
+                        <outlet property="emailTextField" destination="A0U-mE-Daj" id="hMQ-Y0-OQS"/>
+                        <outlet property="passwordTextField" destination="tj3-4z-Pd1" id="ySB-bn-uPm"/>
                         <segue destination="yTz-Wi-8nD" kind="presentation" identifier="SignInSegue" id="4D3-30-oC0"/>
                     </connections>
                 </viewController>
@@ -715,10 +713,10 @@
             </objects>
             <point key="canvasLocation" x="-606" y="1849"/>
         </scene>
-        <!--Reclaim Old Account View Controller-->
+        <!--Reclaim Account View Controller-->
         <scene sceneID="eWS-T9-4HZ">
             <objects>
-                <viewController id="C9h-Bt-QwJ" customClass="ReclaimOldAccountViewController" sceneMemberID="viewController">
+                <viewController id="C9h-Bt-QwJ" customClass="ReclaimAccountViewController" customModule="iOS_Iron_Pong" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pDZ-ff-bfB"/>
                         <viewControllerLayoutGuide type="bottom" id="oAV-bj-obx"/>
@@ -732,7 +730,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ib-Wc-bfz">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
@@ -742,7 +740,7 @@
                                 <items>
                                     <barButtonItem systemItem="cancel" id="XrG-Hl-Uh7">
                                         <connections>
-                                            <action selector="cancelButtonPressed:" destination="C9h-Bt-QwJ" id="Nrh-cm-2QF"/>
+                                            <action selector="cancelButtonPressed:" destination="C9h-Bt-QwJ" id="UzD-4c-psL"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -752,7 +750,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
-                                    <action selector="submitButtonPressed" destination="C9h-Bt-QwJ" eventType="touchUpInside" id="Pwz-0x-ONL"/>
+                                    <action selector="submitButtonPressed" destination="C9h-Bt-QwJ" eventType="touchUpInside" id="ffK-lr-RTO"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -764,7 +762,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="nameTextField" destination="sSq-I4-AqU" id="rJU-TJ-U9b"/>
+                        <outlet property="nameTextField" destination="sSq-I4-AqU" id="eFR-ck-gq8"/>
                         <segue destination="8wY-XC-67B" kind="show" identifier="ReclaimOldAccountSegue" id="cCd-HO-jEb"/>
                     </connections>
                 </viewController>
@@ -1249,6 +1247,6 @@
         <image name="user.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4D3-30-oC0"/>
+        <segue reference="nrb-6s-Xf0"/>
     </inferredMetricsTieBreakers>
 </document>
