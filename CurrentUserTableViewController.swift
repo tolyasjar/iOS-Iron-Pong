@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CurrentUserTableViewController: UITableViewController {
+class CurrentUserTableViewController: UITableViewController, UpdatingProfile {
     
     @IBOutlet weak var emailLbl: UILabel!
     @IBOutlet weak var passwordLbl: UILabel!
@@ -25,6 +25,8 @@ class CurrentUserTableViewController: UITableViewController {
     @IBOutlet weak var winRatioLbl: UILabel!
     @IBOutlet weak var totalGamesLbl: UILabel!
     
+    var currentUser = User()
+    
     var users = [User]()
     
     override func viewDidLoad() {
@@ -32,7 +34,7 @@ class CurrentUserTableViewController: UITableViewController {
         
         populateDummyUsers()
         // Assumption CurrentUser = users[0]
-        let currentUser = users[0]
+        currentUser = users[0]
         
         
         self.emailLbl.text = currentUser.email
@@ -101,5 +103,34 @@ class CurrentUserTableViewController: UITableViewController {
         
         
     }
+    
+    func updateProfileDidSave(_ user: User) {
+        
+        //update UI
+        self.emailLbl.text = user.email
+        self.passwordLbl.text = user.password
+        self.nicknameLbl.text = user.nickName
+        
+        self.homeTownLbl.text = user.homeTown
+        self.signatureMoveLbl.text = user.signatureMove
+        self.paddleGripStyleLbl.text = user.paddleGripStyle
+        self.catchPhraseLbl.text = user.catchPhrase
+
+        
+    }
+
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        guard let nextViewController = segue.destination as? UINavigationController
+            else {
+                    fatalError("Destination controller not found")
+                }
+        
+            let editUserTableViewController = nextViewController.topViewController as? EditUserProfileTableViewController
+            editUserTableViewController?.updatingUserProfiledelegate = self
+            editUserTableViewController?.currentUser = currentUser
+        
+        }
     
 }
