@@ -54,7 +54,7 @@ class UpdateOldAccountViewController: UIViewController {
             "nickName": self.nameTextField.text!,
             "email": self.emailTextField.text!,
             "password": self.passwordTextField.text!,
-            "claimed": true as Bool
+            "claimed": true
             ] as [String : Any]
         
         let postData = try! JSONSerialization.data(withJSONObject: parameters, options: [])

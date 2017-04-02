@@ -31,7 +31,9 @@ class PublicUsersViewController: UIViewController, UITableViewDelegate, UITableV
                 print(dictionary)
                 let name = dictionary["nickName"] as! String
                 
-                if dictionary["wins"] == nil {
+//                let claimed = dictionary["claimed"] as! Bool
+                
+                if dictionary["wins"] == nil{
                     
                     let user = User()
                     user.nickName = name
