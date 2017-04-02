@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tc3-JG-T9r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nv4-1O-mY6">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -40,7 +40,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign In"/>
                                 <connections>
-                                    <action selector="signInButtonPressed:" destination="nv4-1O-mY6" eventType="touchUpInside" id="P38-b1-ORs"/>
+                                    <action selector="signInButtonPressed:" destination="nv4-1O-mY6" eventType="touchUpInside" id="pnt-qA-8Im"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="401-44-rOG">
@@ -49,7 +49,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
-                                    <action selector="signUpButtonPressed:" destination="nv4-1O-mY6" eventType="touchUpInside" id="ejV-Hb-e0o"/>
+                                    <action selector="signUpButtonPressed:" destination="nv4-1O-mY6" eventType="touchUpInside" id="tDY-St-V0U"/>
                                     <segue destination="qhY-dZ-UMa" kind="show" identifier="" id="80U-Rz-Ieq"/>
                                 </connections>
                             </button>
@@ -67,22 +67,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Reclaim Old Account"/>
                                 <connections>
-                                    <action selector="signUpButtonPressed:" destination="nv4-1O-mY6" eventType="touchUpInside" id="Q1G-Ke-Isd"/>
-                                    <segue destination="8wY-XC-67B" kind="show" id="iXw-15-Okt"/>
+                                    <segue destination="C9h-Bt-QwJ" kind="show" id="XUb-JO-Uzg"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="emailTextField" destination="A0U-mE-Daj" id="BQ7-Jv-mvF"/>
-                        <outlet property="passwordTextField" destination="tj3-4z-Pd1" id="n3G-8A-rtM"/>
+                        <outlet property="emailTextField" destination="A0U-mE-Daj" id="hMQ-Y0-OQS"/>
+                        <outlet property="passwordTextField" destination="tj3-4z-Pd1" id="ySB-bn-uPm"/>
                         <segue destination="yTz-Wi-8nD" kind="presentation" identifier="SignInSegue" id="4D3-30-oC0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pK0-7R-V3b" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-201" y="102"/>
+            <point key="canvasLocation" x="-1610" y="126"/>
         </scene>
         <!--Edit My Profile-->
         <scene sceneID="cbP-jD-Y9l">
@@ -338,7 +337,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="558"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="rMg-8u-xXr">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="QueueCell" id="rMg-8u-xXr">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rMg-8u-xXr" id="UJv-sc-fiB">
@@ -638,12 +637,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="znC-kg-3zV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1489" y="986"/>
+            <point key="canvasLocation" x="-2570" y="1057"/>
         </scene>
-        <!--Reclaim Old Account View Controller-->
+        <!--Update Old Account View Controller-->
         <scene sceneID="eeK-Tt-JBi">
             <objects>
-                <viewController id="8wY-XC-67B" customClass="ReclaimOldAccountViewController" customModule="iOS_Iron_Pong" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8wY-XC-67B" customClass="UpdateOldAccountViewController" customModule="iOS_Iron_Pong" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2g9-vB-WvS"/>
                         <viewControllerLayoutGuide type="bottom" id="bn1-oX-6Wb"/>
@@ -658,9 +657,43 @@
                                     <constraint firstAttribute="height" constant="64" id="zX9-UG-xIi"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem systemItem="cancel" id="Xst-sv-Zzj"/>
+                                    <barButtonItem systemItem="cancel" id="Xst-sv-Zzj">
+                                        <connections>
+                                            <action selector="cancelButtonPressed:" destination="8wY-XC-67B" id="VW5-b6-sEm"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s6w-Se-hSs">
+                                <rect key="frame" x="87" y="222" width="200" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="re5-Ip-XJL">
+                                <rect key="frame" x="148" y="380" width="78" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Update"/>
+                                <connections>
+                                    <action selector="signUpButtonPressed:" destination="qhY-dZ-UMa" eventType="touchUpInside" id="JRX-qY-vMc"/>
+                                    <action selector="updateButtonPressed" destination="8wY-XC-67B" eventType="touchUpInside" id="xMt-67-GzX"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dO3-dh-3Es">
+                                <rect key="frame" x="87" y="155" width="200" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aQd-me-XdR">
+                                <rect key="frame" x="87" y="285" width="200" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
@@ -669,10 +702,73 @@
                             <constraint firstItem="xDg-we-QEh" firstAttribute="leading" secondItem="h7a-Gi-km0" secondAttribute="leading" id="y8F-p1-ptG"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="dO3-dh-3Es" id="HPJ-fE-fby"/>
+                        <outlet property="nameTextField" destination="aQd-me-XdR" id="yzN-pe-CYt"/>
+                        <outlet property="passwordTextField" destination="s6w-Se-hSs" id="mR4-bH-Grl"/>
+                        <segue destination="yTz-Wi-8nD" kind="show" identifier="UpdateOldUserSegue" id="nrb-6s-Xf0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P3H-om-K3U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-692" y="986"/>
+            <point key="canvasLocation" x="-606" y="1849"/>
+        </scene>
+        <!--Reclaim Account View Controller-->
+        <scene sceneID="eWS-T9-4HZ">
+            <objects>
+                <viewController id="C9h-Bt-QwJ" customClass="ReclaimAccountViewController" customModule="iOS_Iron_Pong" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pDZ-ff-bfB"/>
+                        <viewControllerLayoutGuide type="bottom" id="oAV-bj-obx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xpl-OF-ROV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sSq-I4-AqU">
+                                <rect key="frame" x="101" y="152" width="172" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                            </textField>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ib-Wc-bfz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="bxT-C4-8Vy"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="cancel" id="XrG-Hl-Uh7">
+                                        <connections>
+                                            <action selector="cancelButtonPressed:" destination="C9h-Bt-QwJ" id="UzD-4c-psL"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEb-Ej-SDd">
+                                <rect key="frame" x="155" y="318" width="65" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitButtonPressed" destination="C9h-Bt-QwJ" eventType="touchUpInside" id="ffK-lr-RTO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0Ib-Wc-bfz" firstAttribute="top" secondItem="xpl-OF-ROV" secondAttribute="top" id="LZX-fQ-8wz"/>
+                            <constraint firstAttribute="trailing" secondItem="0Ib-Wc-bfz" secondAttribute="trailing" id="ZzJ-jN-Qz2"/>
+                            <constraint firstItem="0Ib-Wc-bfz" firstAttribute="leading" secondItem="xpl-OF-ROV" secondAttribute="leading" id="juu-GR-aTf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="sSq-I4-AqU" id="eFR-ck-gq8"/>
+                        <segue destination="8wY-XC-67B" kind="show" identifier="ReclaimOldAccountSegue" id="cCd-HO-jEb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FCd-zf-X50" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1610" y="1057"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="vp2-vo-0Vt">
@@ -745,7 +841,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E81-fT-WaS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="223" y="967"/>
+            <point key="canvasLocation" x="-497" y="1057"/>
         </scene>
         <!--Current User Profile-->
         <scene sceneID="dhp-3a-d68">
@@ -1151,6 +1247,6 @@
         <image name="user.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="EZ4-Ln-oM1"/>
+        <segue reference="nrb-6s-Xf0"/>
     </inferredMetricsTieBreakers>
 </document>

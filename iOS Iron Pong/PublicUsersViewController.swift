@@ -31,7 +31,9 @@ class PublicUsersViewController: UIViewController, UITableViewDelegate, UITableV
                 print(dictionary)
                 let name = dictionary["nickName"] as! String
                 
-                if dictionary["wins"] == nil {
+//                let claimed = dictionary["claimed"] as! Bool
+                
+                if dictionary["wins"] == nil{
                     
                     let user = User()
                     user.nickName = name
@@ -45,11 +47,10 @@ class PublicUsersViewController: UIViewController, UITableViewDelegate, UITableV
                     user.nickName = name
                     user.wins = wins
                     self.users.append(user)
+                    self.users.sort(by: { $0.wins! > $1.wins!})
 
-                    
                 }
                 
-
 
             }
             DispatchQueue.main.async {

@@ -27,4 +27,11 @@ class User {
     
     var id :String?
     
+    init(){
+    }
+    
+    init(email :String){
+        self.email = email
+    }
+    
 }

@@ -122,7 +122,6 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         }
         
         self.authUser()
- //       self.performSegue(withIdentifier: "SignInSegue", sender: self)
 
         
     }
@@ -130,6 +129,11 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         
         
     }
+    
+//    @IBAction func reclaimOldAccountButtonPressed() {
+//        
+//    }
+//    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()

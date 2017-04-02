@@ -162,7 +162,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
             self.currentUser.nickName = self.nameTextField.text
         }
 // This is comment out to avoid creating a lot of user while testing       
-        //self.postNewUser()
+        self.postNewUser()
         self.authUser()
 
         
