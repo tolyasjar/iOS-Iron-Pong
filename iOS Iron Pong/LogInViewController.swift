@@ -131,6 +131,11 @@ class LogInViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    @IBAction func reclaimOldAccountButtonPressed() {
+        
+    }
+    
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true

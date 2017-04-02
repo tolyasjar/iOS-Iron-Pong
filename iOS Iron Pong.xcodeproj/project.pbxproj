@@ -24,6 +24,7 @@
 		C625AC1A1E8ED6FB00D5D43D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C625AC191E8ED6FB00D5D43D /* User.swift */; };
 		C625AC1D1E8ED71100D5D43D /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = C625AC1C1E8ED71100D5D43D /* Game.swift */; };
 		C625AC1F1E8EFD1600D5D43D /* PublicUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C625AC1E1E8EFD1600D5D43D /* PublicUsersViewController.swift */; };
+		C625AC441E9068DD00D5D43D /* UpdateOldAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C625AC431E9068DD00D5D43D /* UpdateOldAccountViewController.swift */; };
 		C81456C01E8FD7FD007E9F07 /* CurrentUserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81456BF1E8FD7FD007E9F07 /* CurrentUserTableViewController.swift */; };
 		C81456CA1E9053DC007E9F07 /* EditUserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81456C91E9053DC007E9F07 /* EditUserTableViewController.swift */; };
 		C81456CE1E905857007E9F07 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = C81456CD1E905857007E9F07 /* user.png */; };
@@ -50,6 +51,7 @@
 		C625AC1C1E8ED71100D5D43D /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Game.swift; path = "iOS Iron Pong/Game.swift"; sourceTree = "<group>"; };
 		C625AC1E1E8EFD1600D5D43D /* PublicUsersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicUsersViewController.swift; sourceTree = "<group>"; };
 		C625AC411E902E4200D5D43D /* ReclaimOldAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReclaimOldAccountViewController.swift; sourceTree = "<group>"; };
+		C625AC431E9068DD00D5D43D /* UpdateOldAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateOldAccountViewController.swift; sourceTree = "<group>"; };
 		C81456BF1E8FD7FD007E9F07 /* CurrentUserTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CurrentUserTableViewController.swift; path = ../CurrentUserTableViewController.swift; sourceTree = "<group>"; };
 		C81456C91E9053DC007E9F07 /* EditUserTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditUserTableViewController.swift; sourceTree = "<group>"; };
 		C81456CD1E905857007E9F07 /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				C81456BF1E8FD7FD007E9F07 /* CurrentUserTableViewController.swift */,
 				C81456C91E9053DC007E9F07 /* EditUserTableViewController.swift */,
 				C625AC411E902E4200D5D43D /* ReclaimOldAccountViewController.swift */,
+				C625AC431E9068DD00D5D43D /* UpdateOldAccountViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				AB3F8EE01E9021230047CCE3 /* ScoreboardTableViewCell.swift in Sources */,
 				C81456C01E8FD7FD007E9F07 /* CurrentUserTableViewController.swift in Sources */,
 				C625AC071E8EB8DB00D5D43D /* QueueViewController.swift in Sources */,
+				C625AC441E9068DD00D5D43D /* UpdateOldAccountViewController.swift in Sources */,
 				C625AC031E8EB8B200D5D43D /* GameViewController.swift in Sources */,
 				C625AC1F1E8EFD1600D5D43D /* PublicUsersViewController.swift in Sources */,
 				C625AC1A1E8ED6FB00D5D43D /* User.swift in Sources */,

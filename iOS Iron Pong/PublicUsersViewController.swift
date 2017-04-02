@@ -45,11 +45,10 @@ class PublicUsersViewController: UIViewController, UITableViewDelegate, UITableV
                     user.nickName = name
                     user.wins = wins
                     self.users.append(user)
+                    self.users.sort(by: { $0.wins! > $1.wins!})
 
-                    
                 }
                 
-
 
             }
             DispatchQueue.main.async {
