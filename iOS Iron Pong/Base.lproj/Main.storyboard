@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nv4-1O-mY6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yTz-Wi-8nD">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -321,7 +321,7 @@
             </objects>
             <point key="canvasLocation" x="3224.8000000000002" y="-1164.4677661169417"/>
         </scene>
-        <!--Queue-->
+        <!--Game Queue-->
         <scene sceneID="kFB-qe-9fO">
             <objects>
                 <viewController id="wwD-jx-qVx" customClass="QueueViewController" customModule="iOS_Iron_Pong" customModuleProvider="target" sceneMemberID="viewController">
@@ -359,6 +359,7 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <connections>
+                                    <action selector="startGameBtnPressed:" destination="wwD-jx-qVx" eventType="touchUpInside" id="6bB-VV-O6I"/>
                                     <segue destination="Kv8-SP-ylM" kind="show" id="3cU-yA-5NW">
                                         <nil key="action"/>
                                     </segue>
@@ -376,14 +377,21 @@
                             <constraint firstItem="kFQ-WH-fvE" firstAttribute="leading" secondItem="vXW-Nh-5sh" secondAttribute="leading" id="ziE-GT-9vH"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Queue" id="snu-TT-fHY"/>
+                    <navigationItem key="navigationItem" title="Game Queue" id="gOx-DZ-r1o">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="mMy-Rr-BNh">
+                            <connections>
+                                <action selector="addCurrentUserTOQueue:" destination="wwD-jx-qVx" id="RoC-YE-ofz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="queueTableView" destination="ZPb-8N-Cem" id="izY-HL-emY"/>
+                        <outlet property="startTheGameBtn" destination="kFQ-WH-fvE" id="Cja-bq-6Jx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pI9-OK-zFf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3951.1999999999998" y="-637.33133433283365"/>
+            <point key="canvasLocation" x="4890.3999999999996" y="-637.33133433283365"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="xAs-ql-25z">
@@ -401,7 +409,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dzj-SR-3FF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5116" y="-637.33133433283365"/>
+            <point key="canvasLocation" x="6055.1999999999998" y="-637.33133433283365"/>
         </scene>
         <!--ScoreBoard-->
         <scene sceneID="XPD-g8-x1D">
@@ -551,7 +559,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="wwD-jx-qVx" kind="relationship" relationship="viewControllers" id="aI7-5Y-Lfn"/>
+                        <segue destination="jbW-ho-eby" kind="relationship" relationship="viewControllers" id="aI7-5Y-Lfn"/>
                         <segue destination="FdS-9T-LZb" kind="relationship" relationship="viewControllers" id="iGc-Y1-NRW"/>
                         <segue destination="Tsn-aK-8ci" kind="relationship" relationship="viewControllers" id="HKe-IW-dum"/>
                     </connections>
@@ -1241,6 +1249,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g0F-uP-8q0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2358" y="-1164"/>
+        </scene>
+        <!--Queue-->
+        <scene sceneID="cJL-fT-T5f">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jbW-ho-eby" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Queue" id="snu-TT-fHY"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lkb-OP-cd6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="wwD-jx-qVx" kind="relationship" relationship="rootViewController" id="R6I-Kr-X83"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6MZ-kK-YQE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3951.1999999999998" y="-637.33133433283365"/>
         </scene>
     </scenes>
     <resources>
