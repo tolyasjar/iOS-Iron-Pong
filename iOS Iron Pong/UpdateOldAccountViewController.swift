@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UpdateOldAccountViewController: UIViewController {
+class UpdateOldAccountViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -21,6 +21,10 @@ class UpdateOldAccountViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        self.emailTextField.delegate = self
+        self.nameTextField.delegate = self
+        self.passwordTextField.delegate = self
         
     }
     
@@ -101,6 +105,11 @@ class UpdateOldAccountViewController: UIViewController {
 
     @IBAction func cancelButtonPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 
 }

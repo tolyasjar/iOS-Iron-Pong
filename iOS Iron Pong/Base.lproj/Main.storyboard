@@ -49,7 +49,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="401-44-rOG">
                                 <rect key="frame" x="82" y="471" width="210" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.13862359523773193" green="0.19154532253742218" blue="0.22364075481891632" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.43578019740000001" green="0.7257215977" blue="0.70984655620000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -61,7 +61,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPu-Ao-S4a">
                                 <rect key="frame" x="133" y="637" width="109" height="30"/>
-                                <color key="backgroundColor" red="0.13862359523773193" green="0.19154532253742218" blue="0.22364075481891632" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.43578019740000001" green="0.7257215977" blue="0.70984655620000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="btS-Gn-PNj"/>
                                     <constraint firstAttribute="width" constant="109" id="fu0-nH-z57"/>
@@ -76,7 +76,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snp-FU-Glf">
                                 <rect key="frame" x="82" y="521" width="210" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.13862359523773193" green="0.19154532253742218" blue="0.22364075481891632" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.43578019740000001" green="0.7257215977" blue="0.70984655620000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Reclaim Old Account">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -400,7 +400,7 @@
                             <constraint firstItem="kFQ-WH-fvE" firstAttribute="leading" secondItem="vXW-Nh-5sh" secondAttribute="leading" id="ziE-GT-9vH"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Queue" id="snu-TT-fHY"/>
+                    <tabBarItem key="tabBarItem" title="Queue" image="Numbered List-30.png" id="snu-TT-fHY"/>
                     <connections>
                         <outlet property="queueTableView" destination="ZPb-8N-Cem" id="izY-HL-emY"/>
                     </connections>
@@ -494,7 +494,7 @@
                             <outlet property="delegate" destination="FdS-9T-LZb" id="yVT-u1-c9S"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="ScoreBoard" id="ri4-cG-nvs"/>
+                    <tabBarItem key="tabBarItem" title="ScoreBoard" image="score-30.png" id="ri4-cG-nvs"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="51t-vH-uUi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -528,7 +528,7 @@
                             <outlet property="delegate" destination="Tsn-aK-8ci" id="lhk-8h-U8V"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Users" id="MGh-Wb-cr2"/>
+                    <tabBarItem key="tabBarItem" title="Users" image="User-30.png" id="MGh-Wb-cr2"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jas-n0-EWa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1268,7 +1268,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Numbered List-30.png" width="30" height="30"/>
+        <image name="User-30.png" width="30" height="30"/>
         <image name="ironPongLogoWhite.png" width="866" height="580"/>
+        <image name="score-30.png" width="30" height="30"/>
         <image name="user.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
