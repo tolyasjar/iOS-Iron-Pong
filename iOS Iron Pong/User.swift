@@ -29,6 +29,26 @@ class User {
     
     var id :String?
     
+    init(id : String, nickName : String, score :Double, losses : Double,  winStreak : Double ,  winRatio:Double , totalGames : Double, avatarURL : String,catchPhrase : String, paddleGripStyle:String, signatureMove :String, homeTown : String  ) {
+        
+        self.id = id
+        self.nickName = nickName
+        self.wins = score
+        self.losses = losses
+        self.winStreak = winStreak
+        self.winRatio = winRatio
+        self.totalGames = totalGames
+        self.avatarURL = avatarURL
+        self.catchPhrase = catchPhrase
+        self.paddleGripStyle = paddleGripStyle
+        self.signatureMove = signatureMove
+        self.homeTown = homeTown
+        
+        
+    }
+    
+    init() {}
+    
 
 
 
