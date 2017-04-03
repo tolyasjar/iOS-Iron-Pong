@@ -78,6 +78,7 @@ class QueueViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let user = self.queueUsers[indexPath.row]
         
         cell.textLabel?.text = user.nickName
+        cell.textLabel?.textColor = UIColor.white
         
         return cell
     }
