@@ -24,6 +24,15 @@ class QueueViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         startTheGameBtn.layer.masksToBounds = true
         startTheGameBtn.layer.cornerRadius = 15
+        
+        let userDefaults = Foundation.UserDefaults.standard
+        let nickName  = userDefaults.string(forKey: "nickName")
+        let _id  = userDefaults.string(forKey: "_id")
+        
+        currentUser.nickName = nickName
+        currentUser.id = _id
+        
+
         // Do any additional setup after loading the view.
         //assumption current User value   jamesjosephsewell@gmail.com
 //        currentUser.email = "test@gmail.com"
@@ -37,14 +46,6 @@ class QueueViewController: UIViewController, UITableViewDelegate, UITableViewDat
         _ = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(QueueViewController.updateQueue), userInfo: nil, repeats: true)
         
         self.startTheGameBtn.isEnabled = false
-        
-        let userDefaults = Foundation.UserDefaults.standard
-        let nickName  = userDefaults.string(forKey: "nickName")
-        let _id  = userDefaults.string(forKey: "_id")
-        
-        currentUser.nickName = nickName
-        currentUser.id = _id
-
         
     }
     
@@ -63,12 +64,12 @@ class QueueViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
+
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+
         return self.queueUsers.count
     }
     

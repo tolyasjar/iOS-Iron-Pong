@@ -11,7 +11,6 @@ import UIKit
 class CurrentUserTableViewController: UITableViewController, UpdatingProfile {
     
     @IBOutlet weak var emailLbl: UILabel!
-    @IBOutlet weak var passwordLbl: UILabel!
     @IBOutlet weak var nicknameLbl: UILabel!
     
     @IBOutlet weak var homeTownLbl: UILabel!
@@ -32,32 +31,97 @@ class CurrentUserTableViewController: UITableViewController, UpdatingProfile {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        populateDummyUsers()
+        getCurrentUser()
+
+        //populateDummyUsers()
+        
         // Assumption CurrentUser = users[0]
-        currentUser = users[0]
+       // currentUser = users[0]
         
         
-        self.emailLbl.text = currentUser.email
-        self.passwordLbl.text = currentUser.password
-        self.nicknameLbl.text = currentUser.nickName
-        
-        self.homeTownLbl.text = currentUser.homeTown
-        self.signatureMoveLbl.text = currentUser.signatureMove
-        self.paddleGripStyleLbl.text = currentUser.paddleGripStyle
-        self.catchPhraseLbl.text = currentUser.catchPhrase
-        
-        self.winsLbl.text = "\(currentUser.wins!)"
-        self.lossesLbl.text = "\(currentUser.losses!)"
         //self.winRatioLbl.text = "\(currentUser.winRatio!)"
         //self.winstreakLbl.text = "\(currentUser.winStreak!)"
         //self.totalGamesLbl.text = "\(currentUser.totalGames!)"
-        
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        getCurrentUser()
+        }
     
     @IBAction func cancelBtnPressed(_ sender: Any) {
         
         self.dismiss(animated: true, completion: nil)
     }
+
+    func getCurrentUser(){
+        
+            let url = URL(string: "https://iron-pong.herokuapp.com/api/users/\(currentUser.id!)")!
+            URLSession.shared.dataTask(with: url) { (data, responce, error) in
+                let json = try! JSONSerialization.jsonObject(with: data!, options: []) as! [String:Any]
+                
+                self.currentUser.email = json["email"] as? String
+                self.currentUser.nickName = json["nickName"] as? String
+                self.currentUser.avatarURL = json["avatarURL"] as? String
+                
+                self.currentUser.homeTown = json["homeTown"] as? String
+                self.currentUser.signatureMove = json["signatureMove"] as? String
+                self.currentUser.paddleGripStyle = json["paddleGripStyle"] as? String
+                self.currentUser.catchPhrase = json ["catchPhrase"] as? String
+                
+                self.currentUser.wins = json["wins"] as? Double
+                self.currentUser.losses = json["losses"] as? Double
+                self.currentUser.winStreak = json["winStreak"] as? Double
+                self.currentUser.winRatio = json["winRatio"] as? Double
+                self.currentUser.totalGames = json["totalGames"] as? Double
+                
+                DispatchQueue.main.async {
+                    
+                    if (self.currentUser.email != nil) {
+                        self.emailLbl.text = self.currentUser.email
+                    }
+                    if (self.currentUser.nickName != nil) {
+                        self.nicknameLbl.text = self.currentUser.nickName
+                    }
+                    
+                    
+                    if (self.currentUser.homeTown != nil) {
+                        self.emailLbl.text = self.currentUser.homeTown
+                    }
+                    if (self.currentUser.signatureMove != nil) {
+                        self.signatureMoveLbl.text = self.currentUser.signatureMove
+                    }
+                    if (self.currentUser.paddleGripStyle != nil) {
+                        self.paddleGripStyleLbl.text = self.currentUser.paddleGripStyle
+                    }
+                    if (self.currentUser.catchPhrase != nil) {
+                        self.catchPhraseLbl.text = self.currentUser.catchPhrase
+                    }
+                    
+                    if (self.currentUser.wins != nil) {
+                        self.winsLbl.text = "\(self.currentUser.wins!)"
+                    }
+                    
+                    if (self.currentUser.losses != nil) {
+                        self.lossesLbl.text = "\(self.currentUser.losses!)"
+                    }
+                    if (self.currentUser.winRatio != nil) {
+                        self.winRatioLbl.text = "\(self.currentUser.winRatio!)"
+                    }
+                    if (self.currentUser.winStreak != nil) {
+                        self.totalGamesLbl.text = "\(self.currentUser.winStreak!)"
+                    }
+                    if (self.currentUser.totalGames != nil) {
+                        self.totalGamesLbl.text = "\(self.currentUser.totalGames!)"
+                    }
+
+                    
+                }
+                }.resume()
+            
+        }
+
+    
+
     func populateDummyUsers() {
         
         
@@ -73,7 +137,6 @@ class CurrentUserTableViewController: UITableViewController, UpdatingProfile {
                     for item in jsonDict {
                         let user = User()
                         user.email = item["email"] as? String
-                        user.password = item["password"] as? String
                         user.nickName = item["nickName"] as? String
                         user.avatarURL = item["avatarURL"] as? String
                         
@@ -112,7 +175,7 @@ class CurrentUserTableViewController: UITableViewController, UpdatingProfile {
         
         //update UI
         self.emailLbl.text = user.email
-        self.passwordLbl.text = user.password
+        //self.passwordLbl.text = user.password
         self.nicknameLbl.text = user.nickName
         
         self.homeTownLbl.text = user.homeTown
