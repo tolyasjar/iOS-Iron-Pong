@@ -33,7 +33,7 @@ class PublicUsersViewController: UIViewController, UITableViewDelegate, UITableV
                 print(dictionary)
                 let name = dictionary["nickName"] as! String
                 
-//                let claimed = dictionary["claimed"] as! Bool
+                let claimed = dictionary["claimed"] as! Bool
                 
                 if dictionary["wins"] == nil{
                     
@@ -41,7 +41,7 @@ class PublicUsersViewController: UIViewController, UITableViewDelegate, UITableV
                     user.nickName = name
                     self.users.append(user)
                     
-                } else {
+                } else if claimed == true {
                     
                     let wins = dictionary["wins"] as! Double
                     
