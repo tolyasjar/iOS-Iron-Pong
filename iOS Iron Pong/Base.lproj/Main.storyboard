@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yTz-Wi-8nD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nv4-1O-mY6">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -1501,7 +1501,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jbW-ho-eby" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Queue" id="snu-TT-fHY"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="lkb-OP-cd6">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lkb-OP-cd6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1525,7 +1525,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h5G-zy-qNp" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="ScoreBoard" image="score-30.png" id="ri4-cG-nvs"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ydo-OY-d8f">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ydo-OY-d8f">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.1231953278" green="0.18782076240000001" blue="0.22127497199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
