@@ -14,9 +14,20 @@ class ScoreBoardTableViewController: UITableViewController {
     var players = [Game]() // for dummy data
     var games = [Game]()
     var users = [User]()
+    
+    var currentUser = User()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let userDefaults = Foundation.UserDefaults.standard
+        let nickName  = userDefaults.string(forKey: "nickName")
+        let _id  = userDefaults.string(forKey: "_id")
+        
+        currentUser.nickName = nickName
+        currentUser.id = _id
+
         
         populatUsers()
         populatScoreBoard()
@@ -145,6 +156,20 @@ class ScoreBoardTableViewController: UITableViewController {
         
         return cell
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+    if segue.identifier == "ToCurrentUserVC2" {
+    
+    let destinationNavigationController = segue.destination as! UINavigationController
+    let currentUserTableViewController = destinationNavigationController.topViewController as! CurrentUserTableViewController
+    
+    currentUserTableViewController.currentUser = currentUser
+        }
+    
+    }
+    
+
  
 
 

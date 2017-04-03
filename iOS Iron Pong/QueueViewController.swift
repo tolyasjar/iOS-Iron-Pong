@@ -231,13 +231,14 @@ class QueueViewController: UIViewController, UITableViewDelegate, UITableViewDat
             
         }
         
-        if segue.identifier == "ToCurrentUserVC" {
+        if segue.identifier == "ToCurrentUserVC1" {
             
             let destinationNavigationController = segue.destination as! UINavigationController
             let currentUserTableViewController = destinationNavigationController.topViewController as! CurrentUserTableViewController
             
             currentUserTableViewController.currentUser = currentUser
         }
+        
     }
 
     

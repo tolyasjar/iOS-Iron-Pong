@@ -12,9 +12,21 @@ class UsersTableViewController: UITableViewController {
     
     var users = [User]()
     
+    var currentUser = User()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
      //   UINavigationBar.appearance().tintColor = UIColor.white
+        
+
+        let userDefaults = Foundation.UserDefaults.standard
+        let nickName  = userDefaults.string(forKey: "nickName")
+        let _id  = userDefaults.string(forKey: "_id")
+        
+        currentUser.nickName = nickName
+        currentUser.id = _id
+
+        
         showUsers ()
     }
     
@@ -141,8 +153,17 @@ class UsersTableViewController: UITableViewController {
             
             userProfileVC.selectedUser = users[(indexPath?.row)!]
             
-            
         }
+        
+            if segue.identifier == "ToCurrentUserVC3" {
+                
+                let destinationNavigationController = segue.destination as! UINavigationController
+                let currentUserTableViewController = destinationNavigationController.topViewController as! CurrentUserTableViewController
+                
+                currentUserTableViewController.currentUser = currentUser
+            }
+            
+        
 
     }
     

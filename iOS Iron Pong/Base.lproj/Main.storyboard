@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yTz-Wi-8nD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yTz-Wi-8nD">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -464,7 +464,7 @@
                     <navigationItem key="navigationItem" title="The Queue" id="Mcb-0d-fJY">
                         <barButtonItem key="leftBarButtonItem" image="User-30.png" id="Wb2-kV-U7V">
                             <connections>
-                                <segue destination="tc3-JG-T9r" kind="show" identifier="ToCurrentUserVC" id="KRw-JM-wtS"/>
+                                <segue destination="tc3-JG-T9r" kind="show" identifier="ToCurrentUserVC1" id="KRw-JM-wtS"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="zPX-rx-8x0">
@@ -645,7 +645,7 @@
                     <navigationItem key="navigationItem" title="Score Board" id="12G-Ds-IVP">
                         <barButtonItem key="leftBarButtonItem" image="User-30.png" id="mQd-hG-rgx">
                             <connections>
-                                <segue destination="tc3-JG-T9r" kind="show" id="lCM-gY-PIJ"/>
+                                <segue destination="tc3-JG-T9r" kind="show" identifier="ToCurrentUserVC2" id="lCM-gY-PIJ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -701,7 +701,7 @@
                         <barButtonItem key="leftBarButtonItem" image="User-30.png" id="qO5-DC-tEn">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <segue destination="tc3-JG-T9r" kind="show" id="37g-Iv-w7A"/>
+                                <segue destination="tc3-JG-T9r" kind="show" identifier="ToCurrentUserVC3" id="37g-Iv-w7A"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1837,7 +1837,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ekJ-Sf-mn3" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Users" image="User-30.png" id="MGh-Wb-cr2"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="yUW-Zq-aoW">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yUW-Zq-aoW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.25197964906692505" green="0.29760968685150146" blue="0.32166549563407898" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -1864,7 +1864,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="4D3-30-oC0"/>
-        <segue reference="R6I-Kr-X83"/>
         <segue reference="lCM-gY-PIJ"/>
+        <segue reference="R6I-Kr-X83"/>
     </inferredMetricsTieBreakers>
 </document>
