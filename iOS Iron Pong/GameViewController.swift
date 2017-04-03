@@ -96,6 +96,7 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         print(self.otherPlayerScore)
         
         self.postGame()
+        self.performSegue(withIdentifier: "BackToQueueSegue", sender: self)
     }
     
 
