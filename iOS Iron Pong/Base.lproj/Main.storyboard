@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nv4-1O-mY6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yTz-Wi-8nD">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -444,6 +444,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="The Queue" id="Mcb-0d-fJY">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="zPX-rx-8x0">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="addCurrentUserTOQueue:" destination="wwD-jx-qVx" id="Es3-gY-wO8"/>
                             </connections>
@@ -538,7 +539,7 @@
             </objects>
             <point key="canvasLocation" x="6055.1999999999998" y="-637.33133433283365"/>
         </scene>
-        <!--ScoreBoard-->
+        <!--Score Board-->
         <scene sceneID="XPD-g8-x1D">
             <objects>
                 <tableViewController id="FdS-9T-LZb" customClass="ScoreBoardTableViewController" customModule="iOS_Iron_Pong" customModuleProvider="target" sceneMemberID="viewController">
@@ -554,28 +555,28 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="162.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKo-Cd-fZi">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKo-Cd-fZi">
                                             <rect key="frame" x="19" y="87" width="252" height="37"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXJ-II-VeK">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXJ-II-VeK">
                                             <rect key="frame" x="19" y="8" width="252" height="48"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpT-w8-cKO">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpT-w8-cKO">
                                             <rect key="frame" x="279" y="7" width="42" height="37"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y94-jD-8g5">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y94-jD-8g5">
                                             <rect key="frame" x="279" y="87" width="42" height="37"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -597,7 +598,13 @@
                                         <outlet property="playerTwoScoreLabel" destination="Y94-jD-8g5" id="VO7-v6-toH"/>
                                     </connections>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.16470588235294117" green="0.24313725490196078" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="playerOneLabel" destination="bXJ-II-VeK" id="Di4-Ya-frX"/>
+                                    <outlet property="playerOneScoreLabel" destination="gpT-w8-cKO" id="rpO-X3-vim"/>
+                                    <outlet property="playerTwoLabel" destination="QKo-Cd-fZi" id="rZR-gX-j4z"/>
+                                    <outlet property="playerTwoScoreLabel" destination="Y94-jD-8g5" id="ma7-JW-sc9"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -605,11 +612,11 @@
                             <outlet property="delegate" destination="FdS-9T-LZb" id="yVT-u1-c9S"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="ScoreBoard" image="score-30.png" id="ri4-cG-nvs"/>
+                    <navigationItem key="navigationItem" title="Score Board" id="12G-Ds-IVP"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="51t-vH-uUi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2229.5999999999999" y="127.28635682158921"/>
+            <point key="canvasLocation" x="3168.8000000000002" y="127.28635682158921"/>
         </scene>
         <!--Users-->
         <scene sceneID="hm7-pb-W33">
@@ -674,7 +681,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tPW-Rc-ZG2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3225" y="753"/>
+            <point key="canvasLocation" x="4164" y="752.47376311844084"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="FK1-xI-lW5">
@@ -687,7 +694,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="jbW-ho-eby" kind="relationship" relationship="viewControllers" id="aI7-5Y-Lfn"/>
-                        <segue destination="FdS-9T-LZb" kind="relationship" relationship="viewControllers" id="iGc-Y1-NRW"/>
+                        <segue destination="h5G-zy-qNp" kind="relationship" relationship="viewControllers" id="iGc-Y1-NRW"/>
                         <segue destination="Tsn-aK-8ci" kind="relationship" relationship="viewControllers" id="HKe-IW-dum"/>
                     </connections>
                 </tabBarController>
@@ -934,7 +941,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.1386235952" green="0.1915453225" blue="0.22364075480000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.12319532781839371" green="0.18782076239585876" blue="0.2212749719619751" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="sSq-I4-AqU" firstAttribute="leading" secondItem="oin-yZ-bjf" secondAttribute="leading" constant="30" id="5SF-5d-jNe"/>
                                     <constraint firstItem="sSq-I4-AqU" firstAttribute="top" secondItem="oin-yZ-bjf" secondAttribute="top" constant="82" id="ONk-1v-ThK"/>
@@ -1446,6 +1453,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hs2-Lt-8qR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.1231953278" green="0.18782076240000001" blue="0.22127497199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1464,6 +1476,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dyg-oY-YpV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.12319532781839371" green="0.18782076239585876" blue="0.2212749719619751" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1480,9 +1497,14 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jbW-ho-eby" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Queue" id="snu-TT-fHY"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lkb-OP-cd6">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="lkb-OP-cd6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.1386235952" green="0.1915453225" blue="0.22364075480000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1492,6 +1514,29 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6MZ-kK-YQE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3951.1999999999998" y="-637.33133433283365"/>
+        </scene>
+        <!--ScoreBoard-->
+        <scene sceneID="yGB-yW-zMS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h5G-zy-qNp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="ScoreBoard" image="score-30.png" id="ri4-cG-nvs"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ydo-OY-d8f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.1231953278" green="0.18782076240000001" blue="0.22127497199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="FdS-9T-LZb" kind="relationship" relationship="rootViewController" id="DVF-Rn-nY8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gYz-0E-nXs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2229.5999999999999" y="127.28635682158921"/>
         </scene>
     </scenes>
     <resources>
