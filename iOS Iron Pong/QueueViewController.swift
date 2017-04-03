@@ -130,11 +130,6 @@ class QueueViewController: UIViewController, UITableViewDelegate, UITableViewDat
         self.present(alert, animated: true, completion: nil)
 
         
-//        //update table
-//        self.queueTableView.beginUpdates()
-//        self.queueTableView.insertRows(at: [IndexPath.init(row: self.users.count-1, section: 0)], with: .automatic)
-//        self.queueTableView.endUpdates()
-        
         //deactivate adding the user again
         self.navigationItem.rightBarButtonItem?.isEnabled = false     //assumption user loggedin or not ??
 

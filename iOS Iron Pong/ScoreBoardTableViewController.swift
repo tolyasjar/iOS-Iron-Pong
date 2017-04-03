@@ -11,12 +11,16 @@
 import UIKit
 
 class ScoreBoardTableViewController: UITableViewController {
-    var players = [Game]()
+    var players = [Game]() // for dummy data
+    var games = [Game]()
+    var users = [User]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        readDummyData()
+        populatUsers()
+        populatScoreBoard()
+        //readDummyData()
     }
     
     func readDummyData() {
@@ -50,6 +54,55 @@ class ScoreBoardTableViewController: UITableViewController {
         }
         
     }
+    //MARK:- GET Users from API
+
+    func populatUsers() {
+    
+    let url = URL(string: "https://iron-pong.herokuapp.com/api/users")!
+    URLSession.shared.dataTask(with: url) { (data, responce, error) in
+    let json = try! JSONSerialization.jsonObject(with: data!, options: []) as! [[String:Any]]
+    
+    for item in json {
+    
+    let player = User()
+    
+    player.id = item["_id"] as? String
+    player.nickName = item["nickName"] as? String
+    
+    self.users.append(player)
+    }
+    }.resume()
+    
+    }
+
+    //MARK:- GET Games from API
+    
+    func populatScoreBoard() {
+        
+        let url = URL(string: "https://iron-pong.herokuapp.com/api/games")!
+        URLSession.shared.dataTask(with: url) { (data, responce, error) in
+            let json = try! JSONSerialization.jsonObject(with: data!, options: []) as! [[String:Any]]
+            
+            for item in json {
+                
+                let game = Game()
+
+                    game.playerOne = item["playerOne"] as? String
+                    game.playerTwo = item["playerTwo"] as? String
+                    game.playerOneScore = item["playerOneScore"] as? Double
+                    game.playerTwoScore = item["playerTwoScore"] as? Double
+                
+                    self.games.append(game)
+            }
+            
+            DispatchQueue.main.async {
+            self.tableView.reloadData()
+                
+            }
+            }.resume()
+        
+    }
+
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -57,14 +110,38 @@ class ScoreBoardTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return players.count
+        //return players.count
+        return games.count
     }
 
+        override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ScoreBoard", for: indexPath) as! ScoreboardTableViewCell
+        /* API Problem
+            for i in 0 ..< users.count  {
+                
+                print(self.games[indexPath.row].playerOne!)
+            if (users[i].id! == self.games[indexPath.row].playerOne!) {
+                print("Found")
+                cell.playerOneLabel.text = users[i].nickName //self.games[indexPath.row].playerOne!
+                print("Found")
+
+                }
+                if (users[i].id! == self.games[indexPath.row].playerTwo!) {
+                    cell.playerOneLabel.text = users[i].nickName //self.games[indexPath.row].playerOne!
+                    
+                }
+            }
+ */
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ScoreBoard", for: indexPath) as! ScoreboardTableViewCell
-        let playerName = self.players[indexPath.row]
-        cell.playerOneLabel?.text = playerName.playerOne
+        cell.playerOneLabel.text = self.games[indexPath.row].playerOne!
+        cell.playerTwoLabel.text = self.games[indexPath.row].playerTwo!
+        
+        let score1 = self.games[indexPath.row].playerOneScore
+        let score2 = self.games[indexPath.row].playerTwoScore
+        
+        cell.playerOneScoreLabel.text = String(format: "%.0f", score1!)
+        cell.playerTwoScoreLabel.text = String(format: "%.0f", score2!)
         
         return cell
     }
