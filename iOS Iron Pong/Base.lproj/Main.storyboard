@@ -520,7 +520,6 @@
                                 <state key="normal" title="Submit Game"/>
                                 <connections>
                                     <action selector="submitGameButtonPressed:" destination="Kv8-SP-ylM" eventType="touchUpInside" id="Exq-SX-hLi"/>
-                                    <segue destination="wwD-jx-qVx" kind="show" id="ktW-kT-3Qc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -532,6 +531,7 @@
                         <outlet property="playerOneScoreTextField" destination="MYW-8g-5Cf" id="Bns-eu-zft"/>
                         <outlet property="playerTwoNameLabel" destination="1ta-k5-aWJ" id="cfK-jC-o3Y"/>
                         <outlet property="playerTwoScoreTextField" destination="bUa-dM-huO" id="EKy-lT-s6N"/>
+                        <segue destination="wwD-jx-qVx" kind="show" identifier="BackToQueueSegue" id="px3-Yb-UDv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dzj-SR-3FF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1502,6 +1502,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="4D3-30-oC0"/>
-        <segue reference="ktW-kT-3Qc"/>
+        <segue reference="px3-Yb-UDv"/>
     </inferredMetricsTieBreakers>
 </document>
