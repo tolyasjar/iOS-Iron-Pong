@@ -33,6 +33,8 @@ class EditUserProfileTableViewController: UITableViewController, UITextFieldDele
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        avatarbtn.setImage(UIImage(named: "user.png"), for: UIControlState.normal)
+        
         self.emailTxtField.text = currentUser.email
         self.passwordTxtField.text = currentUser.password
         self.nickNameTxtField.text = currentUser.nickName

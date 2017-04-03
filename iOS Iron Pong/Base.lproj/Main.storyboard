@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nv4-1O-mY6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="tc3-JG-T9r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -867,7 +867,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.1386235952" green="0.1915453225" blue="0.22364075480000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.12319532781839371" green="0.18782076239585876" blue="0.2212749719619751" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="sSq-I4-AqU" firstAttribute="leading" secondItem="oin-yZ-bjf" secondAttribute="leading" constant="30" id="5SF-5d-jNe"/>
                                     <constraint firstItem="sSq-I4-AqU" firstAttribute="top" secondItem="oin-yZ-bjf" secondAttribute="top" constant="82" id="ONk-1v-ThK"/>
@@ -1376,9 +1376,14 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tc3-JG-T9r" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hs2-Lt-8qR">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Hs2-Lt-8qR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.1231953278" green="0.18782076240000001" blue="0.22127497199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1394,9 +1399,14 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vUX-T5-onV" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dyg-oY-YpV">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="dyg-oY-YpV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.12319532781839371" green="0.18782076239585876" blue="0.2212749719619751" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1413,9 +1423,10 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jbW-ho-eby" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Queue" id="snu-TT-fHY"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lkb-OP-cd6">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="lkb-OP-cd6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.1386235952" green="0.1915453225" blue="0.22364075480000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
