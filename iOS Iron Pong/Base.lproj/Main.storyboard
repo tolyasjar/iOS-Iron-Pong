@@ -564,7 +564,8 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="163" sectionHeaderHeight="28" sectionFooterHeight="28" id="Qkz-9w-PEu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.4479790032" green="0.48966309429999999" blue="0.51771759989999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="sectionIndexBackgroundColor" red="0.4479790032" green="0.48966309429999999" blue="0.51771759989999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ScoreBoard" rowHeight="163" id="aZK-iq-4hQ" customClass="ScoreboardTableViewCell" customModule="iOS_Iron_Pong" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="163"/>
@@ -609,6 +610,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <color key="backgroundColor" red="0.4479790032" green="0.48966309429999999" blue="0.51771759989999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <connections>
                                         <outlet property="playerOneLabel" destination="bXJ-II-VeK" id="jFk-pI-Fgx"/>
                                         <outlet property="playerOneScoreLabel" destination="gpT-w8-cKO" id="igV-eo-xdo"/>
@@ -616,7 +618,7 @@
                                         <outlet property="playerTwoScoreLabel" destination="Y94-jD-8g5" id="VO7-v6-toH"/>
                                     </connections>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.4479790032" green="0.48966309429999999" blue="0.51771759989999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <connections>
                                     <outlet property="playerOneLabel" destination="bXJ-II-VeK" id="Di4-Ya-frX"/>
                                     <outlet property="playerOneScoreLabel" destination="gpT-w8-cKO" id="rpO-X3-vim"/>
