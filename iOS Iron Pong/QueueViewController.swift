@@ -22,7 +22,8 @@ class QueueViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        startTheGameBtn.layer.masksToBounds = true
+        startTheGameBtn.layer.cornerRadius = 15
         // Do any additional setup after loading the view.
         //assumption current User value   jamesjosephsewell@gmail.com
 //        currentUser.email = "test@gmail.com"
@@ -228,9 +229,16 @@ class QueueViewController: UIViewController, UITableViewDelegate, UITableViewDat
             gameVC.otherPlayer = self.otherPlayer
             
         }
-
         
+        if segue.identifier == "ToCurrentUserVC" {
+            
+            let destinationNavigationController = segue.destination as! UINavigationController
+            let currentUserTableViewController = destinationNavigationController.topViewController as! CurrentUserTableViewController
+            
+            currentUserTableViewController.currentUser = currentUser
+        }
     }
+
     
 }
 

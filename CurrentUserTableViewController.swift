@@ -54,6 +54,10 @@ class CurrentUserTableViewController: UITableViewController, UpdatingProfile {
         
     }
     
+    @IBAction func cancelBtnPressed(_ sender: Any) {
+        
+        self.dismiss(animated: true, completion: nil)
+    }
     func populateDummyUsers() {
         
         
