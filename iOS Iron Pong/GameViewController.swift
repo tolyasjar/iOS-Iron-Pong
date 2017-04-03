@@ -49,8 +49,32 @@ class GameViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func submitGameButtonPressed(_ sender: Any) {
         
-        self.currentUserScore = Int(self.playerOneScoreTextField.text!)!
-        self.otherPlayerScore = Int(self.playerTwoScoreTextField.text!)!
+        guard let currentUserScore = Int(self.playerOneScoreTextField.text!) else {
+            
+            let alertController = UIAlertController(title: "Oops!", message: "Error logging game. Please re-submit and make sure to enter whole numbers.", preferredStyle: .alert)
+            let dismissAction = UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.cancel) {
+                UIAlertAction in
+            }
+            alertController.addAction(dismissAction)
+            self.present(alertController, animated: true, completion: nil)
+            
+            return
+        }
+        
+        guard let otherPlayerScore = Int(self.playerTwoScoreTextField.text!) else {
+            
+            let alertController = UIAlertController(title: "Oops!", message: "Error logging game. Please re-submit and make sure to enter whole numbers.", preferredStyle: .alert)
+            let dismissAction = UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.cancel) {
+                UIAlertAction in
+            }
+            alertController.addAction(dismissAction)
+            self.present(alertController, animated: true, completion: nil)
+            
+            return
+        }
+        
+        self.currentUserScore = currentUserScore
+        self.otherPlayerScore = otherPlayerScore
         
         if self.currentUserScore > self.otherPlayerScore {
             
