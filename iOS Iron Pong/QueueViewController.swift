@@ -17,16 +17,18 @@ class QueueViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     var currentUser = User()
     
+    var otherPlayer = User()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
         // Do any additional setup after loading the view.
         //assumption current User value   jamesjosephsewell@gmail.com
-        currentUser.email = "test@gmail.com"
-        currentUser.password = "somepassword"
-        currentUser.nickName = "Filipino Wood Paddle"
-        currentUser.id = "58e03833f36d2878e036c67c" // pick another user NOT in the queue
+//        currentUser.email = "test@gmail.com"
+//        currentUser.password = "somepassword"
+//        currentUser.nickName = "Filipino Wood Paddle"
+//        currentUser.id = "58e03833f36d2878e036c67c" // pick another user NOT in the queue
         
         self.getQueue()
         
@@ -34,6 +36,14 @@ class QueueViewController: UIViewController, UITableViewDelegate, UITableViewDat
         _ = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(QueueViewController.updateQueue), userInfo: nil, repeats: true)
         
         self.startTheGameBtn.isEnabled = false
+        
+        let userDefaults = Foundation.UserDefaults.standard
+        let nickName  = userDefaults.string(forKey: "nickName")
+        let _id  = userDefaults.string(forKey: "_id")
+        
+        currentUser.nickName = nickName
+        currentUser.id = _id
+
         
     }
     
@@ -152,9 +162,18 @@ class QueueViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBAction func startGameBtnPressed(_ sender: Any) {
         
+        self.getOtherPlayersId()
         //User Alert
         let alert = UIAlertController(title: "Get Ready!", message: "You are up next! ", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "👍🏻", style: UIAlertActionStyle.default, handler: nil))
+        
+        let getReadyAlert = UIAlertAction(title: "👍🏻", style: UIAlertActionStyle.default) {
+            UIAlertAction in
+            
+            self.performSegue(withIdentifier: "GameSegue", sender: self)
+            
+        }
+        
+        alert.addAction(getReadyAlert)
         self.present(alert, animated: true, completion: nil)
 
         
@@ -190,6 +209,31 @@ class QueueViewController: UIViewController, UITableViewDelegate, UITableViewDat
             
             return
         }
+    }
+    
+    func getOtherPlayersId() {
+        
+        if queueUsers[0].nickName == currentUser.nickName {
+            self.otherPlayer.id = queueUsers[1].id
+            self.otherPlayer.nickName = queueUsers[1].nickName
+
+            
+        } else if queueUsers[1].nickName == currentUser.nickName {
+            self.otherPlayer.id = queueUsers[0].id
+            self.otherPlayer.nickName = queueUsers[0].nickName
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "GameSegue" {
+            
+            let gameVC = segue.destination as! GameViewController
+            gameVC.otherPlayer = self.otherPlayer
+            
+        }
+
+        
     }
     
 }
