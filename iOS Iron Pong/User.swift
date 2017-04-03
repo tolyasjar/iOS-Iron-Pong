@@ -28,6 +28,8 @@ class User {
     var homeTown: String?
     
     var id :String?
+    
+
 
 
 }
