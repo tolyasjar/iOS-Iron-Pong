@@ -367,6 +367,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Edit My Profile" id="i0f-5x-Ukm">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="w1q-ap-HCQ">
+                            <connections>
+                                <action selector="cancelBtnPressed:" destination="IDh-Kg-4Ao" id="ETM-Jo-osq"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="LHV-cO-h0X">
                             <connections>
                                 <action selector="saveBtnPressed:" destination="IDh-Kg-4Ao" id="LvL-So-KoA"/>
@@ -386,7 +391,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Gh-KM-leb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3224.8000000000002" y="-1164.4677661169417"/>
+            <point key="canvasLocation" x="8631" y="-1732"/>
         </scene>
         <!--The Queue-->
         <scene sceneID="kFB-qe-9fO">
@@ -401,7 +406,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZPb-8N-Cem">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="563"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="442"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="QueueCell" id="rMg-8u-xXr">
@@ -419,12 +424,15 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kFQ-WH-fvE">
-                                <rect key="frame" x="0.0" y="563" width="375" height="60"/>
+                                <rect key="frame" x="30" y="472" width="315" height="121"/>
                                 <color key="backgroundColor" red="0.99583023790000003" green="0.99630898239999999" blue="0.98733013869999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="Tub-Bn-rGX"/>
+                                    <constraint firstAttribute="height" constant="121" id="btx-Hp-0BP"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="35"/>
+                                <state key="normal" title="Start The Game !">
+                                    <color key="titleColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="startGameBtnPressed:" destination="wwD-jx-qVx" eventType="touchUpInside" id="6bB-VV-O6I"/>
                                 </connections>
@@ -432,17 +440,22 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="kFQ-WH-fvE" secondAttribute="trailing" id="3Tp-rU-QBq"/>
+                            <constraint firstAttribute="trailing" secondItem="kFQ-WH-fvE" secondAttribute="trailing" constant="30" id="3Tp-rU-QBq"/>
                             <constraint firstItem="ZPb-8N-Cem" firstAttribute="top" secondItem="vXW-Nh-5sh" secondAttribute="top" id="BwL-6f-zuF"/>
                             <constraint firstAttribute="trailing" secondItem="ZPb-8N-Cem" secondAttribute="trailing" id="DLm-LD-TqL"/>
-                            <constraint firstItem="EZx-Yb-kTt" firstAttribute="top" secondItem="kFQ-WH-fvE" secondAttribute="bottom" id="EB0-nt-G0H"/>
+                            <constraint firstItem="EZx-Yb-kTt" firstAttribute="top" secondItem="kFQ-WH-fvE" secondAttribute="bottom" constant="30" id="EB0-nt-G0H"/>
                             <constraint firstItem="ZPb-8N-Cem" firstAttribute="leading" secondItem="vXW-Nh-5sh" secondAttribute="leading" id="HQq-7S-hn6"/>
-                            <constraint firstItem="kFQ-WH-fvE" firstAttribute="top" secondItem="ZPb-8N-Cem" secondAttribute="bottom" id="Sy7-P2-O8R"/>
-                            <constraint firstItem="kFQ-WH-fvE" firstAttribute="leading" secondItem="vXW-Nh-5sh" secondAttribute="leading" id="ziE-GT-9vH"/>
+                            <constraint firstItem="kFQ-WH-fvE" firstAttribute="top" secondItem="ZPb-8N-Cem" secondAttribute="bottom" constant="30" id="Sy7-P2-O8R"/>
+                            <constraint firstItem="kFQ-WH-fvE" firstAttribute="leading" secondItem="vXW-Nh-5sh" secondAttribute="leading" constant="30" id="ziE-GT-9vH"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="The Queue" id="Mcb-0d-fJY">
+                        <barButtonItem key="leftBarButtonItem" image="User-30.png" id="Wb2-kV-U7V">
+                            <connections>
+                                <segue destination="tc3-JG-T9r" kind="show" identifier="ToCurrentUserVC" id="KRw-JM-wtS"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="zPX-rx-8x0">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -612,7 +625,13 @@
                             <outlet property="delegate" destination="FdS-9T-LZb" id="yVT-u1-c9S"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Score Board" id="12G-Ds-IVP"/>
+                    <navigationItem key="navigationItem" title="Score Board" id="12G-Ds-IVP">
+                        <barButtonItem key="leftBarButtonItem" image="User-30.png" id="mQd-hG-rgx">
+                            <connections>
+                                <segue destination="tc3-JG-T9r" kind="show" id="lCM-gY-PIJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="51t-vH-uUi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -687,10 +706,11 @@
         <scene sceneID="FK1-xI-lW5">
             <objects>
                 <tabBarController id="yTz-Wi-8nD" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="zgs-Yw-5th">
+                    <tabBar key="tabBar" contentMode="scaleToFill" itemPositioning="centered" id="zgs-Yw-5th">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="jbW-ho-eby" kind="relationship" relationship="viewControllers" id="aI7-5Y-Lfn"/>
@@ -1419,6 +1439,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Current User Profile" id="EDo-d6-QPL">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="m5K-F6-gjV">
+                            <connections>
+                                <action selector="cancelBtnPressed:" destination="4Pk-Y4-1TW" id="cGz-mw-X3D"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="OnB-Fq-zjH">
                             <connections>
                                 <action selector="editButtonPressed:" destination="4Pk-Y4-1TW" id="aif-2V-Asb"/>
@@ -1443,7 +1468,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xyg-5k-AsG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1524" y="-1164"/>
+            <point key="canvasLocation" x="7004" y="-1732"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7iz-Qv-h5b">
@@ -1466,7 +1491,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3pM-80-kOK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="702" y="-845"/>
+            <point key="canvasLocation" x="6055" y="-1689"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6zP-oK-CkR">
@@ -1489,15 +1514,15 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g0F-uP-8q0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2358" y="-1164"/>
+            <point key="canvasLocation" x="7802" y="-1712"/>
         </scene>
         <!--Queue-->
         <scene sceneID="cJL-fT-T5f">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jbW-ho-eby" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Queue" id="snu-TT-fHY"/>
+                    <tabBarItem key="tabBarItem" title="Queue" image="queue.png" id="snu-TT-fHY"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="lkb-OP-cd6">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lkb-OP-cd6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1524,6 +1549,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ydo-OY-d8f">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" red="0.1231953278" green="0.18782076240000001" blue="0.22127497199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1542,11 +1568,13 @@
     <resources>
         <image name="User-30.png" width="30" height="30"/>
         <image name="ironPongLogoWhite.png" width="866" height="580"/>
+        <image name="queue.png" width="40" height="40"/>
         <image name="score-30.png" width="30" height="30"/>
         <image name="user.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="4D3-30-oC0"/>
-        <segue reference="ktW-kT-3Qc"/>
+        <segue reference="R6I-Kr-X83"/>
+        <segue reference="lCM-gY-PIJ"/>
     </inferredMetricsTieBreakers>
 </document>

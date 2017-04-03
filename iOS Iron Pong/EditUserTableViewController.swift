@@ -46,6 +46,9 @@ class EditUserProfileTableViewController: UITableViewController, UITextFieldDele
         
     }
     
+    @IBAction func cancelBtnPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     @IBAction func avatarBtnPressed(_ sender: Any) {
         //Take a pic
     }
