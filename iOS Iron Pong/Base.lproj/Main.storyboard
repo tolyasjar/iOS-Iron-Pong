@@ -388,7 +388,7 @@
             </objects>
             <point key="canvasLocation" x="3224.8000000000002" y="-1164.4677661169417"/>
         </scene>
-        <!--Queue View Controller-->
+        <!--The Queue-->
         <scene sceneID="kFB-qe-9fO">
             <objects>
                 <viewController id="wwD-jx-qVx" customClass="QueueViewController" customModule="iOS_Iron_Pong" customModuleProvider="target" sceneMemberID="viewController">
@@ -401,7 +401,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZPb-8N-Cem">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="558"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="563"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="QueueCell" id="rMg-8u-xXr">
@@ -419,7 +419,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kFQ-WH-fvE">
-                                <rect key="frame" x="0.0" y="558" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="563" width="375" height="60"/>
                                 <color key="backgroundColor" red="0.99583023790000003" green="0.99630898239999999" blue="0.98733013869999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Tub-Bn-rGX"/>
@@ -427,9 +427,6 @@
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="startGameBtnPressed:" destination="wwD-jx-qVx" eventType="touchUpInside" id="6bB-VV-O6I"/>
-                                    <segue destination="Kv8-SP-ylM" kind="show" id="3cU-yA-5NW">
-                                        <nil key="action"/>
-                                    </segue>
                                 </connections>
                             </button>
                         </subviews>
@@ -444,9 +441,19 @@
                             <constraint firstItem="kFQ-WH-fvE" firstAttribute="leading" secondItem="vXW-Nh-5sh" secondAttribute="leading" id="ziE-GT-9vH"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="The Queue" id="Mcb-0d-fJY">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="zPX-rx-8x0">
+                            <connections>
+                                <action selector="addCurrentUserTOQueue:" destination="wwD-jx-qVx" id="Es3-gY-wO8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="queueTableView" destination="ZPb-8N-Cem" id="izY-HL-emY"/>
                         <outlet property="startTheGameBtn" destination="kFQ-WH-fvE" id="Cja-bq-6Jx"/>
+                        <segue destination="Kv8-SP-ylM" kind="show" identifier="GameSegue" id="oKF-kK-bWc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pI9-OK-zFf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -466,6 +473,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <toolbarItems/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dzj-SR-3FF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
